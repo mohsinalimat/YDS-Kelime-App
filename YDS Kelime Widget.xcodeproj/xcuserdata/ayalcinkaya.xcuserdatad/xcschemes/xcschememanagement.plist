@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>YDSKelime.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>A6159CDF1A098A3600CBCB3A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A6F0EC5A1A08123600909E2C</key>
 		<dict>
 			<key>primary</key>

@@ -7,15 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A61122591A0A969000F0047D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A61122581A0A969000F0047D /* StoreKit.framework */; };
+		A61122601A0A978E00F0047D /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A611225F1A0A978E00F0047D /* IAPHelper.m */; };
+		A61122631A0A994D00F0047D /* KelimeIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A61122621A0A994D00F0047D /* KelimeIAPHelper.m */; };
+		A6159CDB1A0987A100CBCB3A /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6159CDA1A0987A100CBCB3A /* words.plist */; };
+		A6159CE31A098A3700CBCB3A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6159CE21A098A3700CBCB3A /* NotificationCenter.framework */; };
+		A6159CE81A098A3700CBCB3A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6159CE71A098A3700CBCB3A /* TodayViewController.swift */; };
+		A6159CEA1A098A3700CBCB3A /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6159CE91A098A3700CBCB3A /* MainInterface.storyboard */; };
+		A6159CED1A098A3700CBCB3A /* YDSKelime.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A6159CE01A098A3700CBCB3A /* YDSKelime.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A6159CF21A098F3F00CBCB3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F0EC671A08123600909E2C /* Images.xcassets */; };
+		A64585611A099A6800943A3A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64585601A099A6800943A3A /* AVFoundation.framework */; };
+		A6EC280C1A0A328000AF9547 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64585601A099A6800943A3A /* AVFoundation.framework */; };
 		A6F0EC611A08123600909E2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0EC601A08123600909E2C /* AppDelegate.swift */; };
 		A6F0EC631A08123600909E2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0EC621A08123600909E2C /* ViewController.swift */; };
 		A6F0EC661A08123600909E2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A6F0EC641A08123600909E2C /* Main.storyboard */; };
 		A6F0EC681A08123600909E2C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F0EC671A08123600909E2C /* Images.xcassets */; };
-		A6F0EC6B1A08123600909E2C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = A6F0EC691A08123600909E2C /* LaunchScreen.xib */; };
 		A6F0EC771A08123600909E2C /* YDS_Kelime_WidgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0EC761A08123600909E2C /* YDS_Kelime_WidgetTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		A6159CEB1A098A3700CBCB3A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6F0EC531A08123600909E2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A6159CDF1A098A3600CBCB3A;
+			remoteInfo = YDSKelime;
+		};
 		A6F0EC711A08123600909E2C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A6F0EC531A08123600909E2C /* Project object */;
@@ -25,24 +42,64 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		A6159CF11A098A3700CBCB3A /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A6159CED1A098A3700CBCB3A /* YDSKelime.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		A61122581A0A969000F0047D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A611225E1A0A978E00F0047D /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
+		A611225F1A0A978E00F0047D /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
+		A61122611A0A994D00F0047D /* KelimeIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KelimeIAPHelper.h; sourceTree = "<group>"; };
+		A61122621A0A994D00F0047D /* KelimeIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KelimeIAPHelper.m; sourceTree = "<group>"; };
+		A6159CDA1A0987A100CBCB3A /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
+		A6159CE01A098A3700CBCB3A /* YDSKelime.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = YDSKelime.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6159CE21A098A3700CBCB3A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		A6159CE61A098A3700CBCB3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A6159CE71A098A3700CBCB3A /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		A6159CE91A098A3700CBCB3A /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		A6159CF41A09971100CBCB3A /* YDSKelime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = YDSKelime.entitlements; sourceTree = "<group>"; };
+		A6159CF51A09972400CBCB3A /* YDS Kelime Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "YDS Kelime Widget.entitlements"; sourceTree = "<group>"; };
+		A64585601A099A6800943A3A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A64585631A099B3300943A3A /* YDS Kelime Widget-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YDS Kelime Widget-Bridging-Header.h"; sourceTree = "<group>"; };
+		A6EC280D1A0A32A900AF9547 /* YDSKelime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YDSKelime-Bridging-Header.h"; sourceTree = "<group>"; };
 		A6F0EC5B1A08123600909E2C /* YDS Kelime Widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YDS Kelime Widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F0EC5F1A08123600909E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6F0EC601A08123600909E2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A6F0EC621A08123600909E2C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A6F0EC651A08123600909E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A6F0EC671A08123600909E2C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A6F0EC6A1A08123600909E2C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		A6F0EC701A08123600909E2C /* YDS Kelime WidgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YDS Kelime WidgetTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F0EC751A08123600909E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6F0EC761A08123600909E2C /* YDS_Kelime_WidgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDS_Kelime_WidgetTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A6159CDD1A098A3600CBCB3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6EC280C1A0A328000AF9547 /* AVFoundation.framework in Frameworks */,
+				A6159CE31A098A3700CBCB3A /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6F0EC581A08123600909E2C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A64585611A099A6800943A3A /* AVFoundation.framework in Frameworks */,
+				A61122591A0A969000F0047D /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,11 +113,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A6159CE11A098A3700CBCB3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A61122581A0A969000F0047D /* StoreKit.framework */,
+				A64585601A099A6800943A3A /* AVFoundation.framework */,
+				A6159CE21A098A3700CBCB3A /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6159CE41A098A3700CBCB3A /* YDSKelime */ = {
+			isa = PBXGroup;
+			children = (
+				A6159CF41A09971100CBCB3A /* YDSKelime.entitlements */,
+				A6159CE71A098A3700CBCB3A /* TodayViewController.swift */,
+				A6159CE91A098A3700CBCB3A /* MainInterface.storyboard */,
+				A6159CE51A098A3700CBCB3A /* Supporting Files */,
+				A6EC280D1A0A32A900AF9547 /* YDSKelime-Bridging-Header.h */,
+			);
+			path = YDSKelime;
+			sourceTree = "<group>";
+		};
+		A6159CE51A098A3700CBCB3A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A6159CE61A098A3700CBCB3A /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		A6F0EC521A08123600909E2C = {
 			isa = PBXGroup;
 			children = (
 				A6F0EC5D1A08123600909E2C /* YDS Kelime Widget */,
 				A6F0EC731A08123600909E2C /* YDS Kelime WidgetTests */,
+				A6159CE41A098A3700CBCB3A /* YDSKelime */,
+				A6159CE11A098A3700CBCB3A /* Frameworks */,
 				A6F0EC5C1A08123600909E2C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +159,7 @@
 			children = (
 				A6F0EC5B1A08123600909E2C /* YDS Kelime Widget.app */,
 				A6F0EC701A08123600909E2C /* YDS Kelime WidgetTests.xctest */,
+				A6159CE01A098A3700CBCB3A /* YDSKelime.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,12 +167,18 @@
 		A6F0EC5D1A08123600909E2C /* YDS Kelime Widget */ = {
 			isa = PBXGroup;
 			children = (
+				A6159CF51A09972400CBCB3A /* YDS Kelime Widget.entitlements */,
 				A6F0EC601A08123600909E2C /* AppDelegate.swift */,
 				A6F0EC621A08123600909E2C /* ViewController.swift */,
 				A6F0EC641A08123600909E2C /* Main.storyboard */,
 				A6F0EC671A08123600909E2C /* Images.xcassets */,
-				A6F0EC691A08123600909E2C /* LaunchScreen.xib */,
 				A6F0EC5E1A08123600909E2C /* Supporting Files */,
+				A6159CDA1A0987A100CBCB3A /* words.plist */,
+				A611225E1A0A978E00F0047D /* IAPHelper.h */,
+				A611225F1A0A978E00F0047D /* IAPHelper.m */,
+				A64585631A099B3300943A3A /* YDS Kelime Widget-Bridging-Header.h */,
+				A61122611A0A994D00F0047D /* KelimeIAPHelper.h */,
+				A61122621A0A994D00F0047D /* KelimeIAPHelper.m */,
 			);
 			path = "YDS Kelime Widget";
 			sourceTree = "<group>";
@@ -115,6 +211,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A6159CDF1A098A3600CBCB3A /* YDSKelime */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6159CEE1A098A3700CBCB3A /* Build configuration list for PBXNativeTarget "YDSKelime" */;
+			buildPhases = (
+				A6159CDC1A098A3600CBCB3A /* Sources */,
+				A6159CDD1A098A3600CBCB3A /* Frameworks */,
+				A6159CDE1A098A3600CBCB3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YDSKelime;
+			productName = YDSKelime;
+			productReference = A6159CE01A098A3700CBCB3A /* YDSKelime.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		A6F0EC5A1A08123600909E2C /* YDS Kelime Widget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6F0EC7A1A08123600909E2C /* Build configuration list for PBXNativeTarget "YDS Kelime Widget" */;
@@ -122,10 +235,12 @@
 				A6F0EC571A08123600909E2C /* Sources */,
 				A6F0EC581A08123600909E2C /* Frameworks */,
 				A6F0EC591A08123600909E2C /* Resources */,
+				A6159CF11A098A3700CBCB3A /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A6159CEC1A098A3700CBCB3A /* PBXTargetDependency */,
 			);
 			name = "YDS Kelime Widget";
 			productName = "YDS Kelime Widget";
@@ -159,11 +274,30 @@
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Hayal Co";
 				TargetAttributes = {
+					A6159CDF1A098A3600CBCB3A = {
+						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 4GA7VHNLUN;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					A6F0EC5A1A08123600909E2C = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 4GA7VHNLUN;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 					A6F0EC6F1A08123600909E2C = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = 4GA7VHNLUN;
 						TestTargetID = A6F0EC5A1A08123600909E2C;
 					};
 				};
@@ -183,17 +317,27 @@
 			targets = (
 				A6F0EC5A1A08123600909E2C /* YDS Kelime Widget */,
 				A6F0EC6F1A08123600909E2C /* YDS Kelime WidgetTests */,
+				A6159CDF1A098A3600CBCB3A /* YDSKelime */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A6159CDE1A098A3600CBCB3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6159CF21A098F3F00CBCB3A /* Images.xcassets in Resources */,
+				A6159CEA1A098A3700CBCB3A /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6F0EC591A08123600909E2C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6159CDB1A0987A100CBCB3A /* words.plist in Resources */,
 				A6F0EC661A08123600909E2C /* Main.storyboard in Resources */,
-				A6F0EC6B1A08123600909E2C /* LaunchScreen.xib in Resources */,
 				A6F0EC681A08123600909E2C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,11 +352,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A6159CDC1A098A3600CBCB3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6159CE81A098A3700CBCB3A /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6F0EC571A08123600909E2C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A6F0EC631A08123600909E2C /* ViewController.swift in Sources */,
+				A61122631A0A994D00F0047D /* KelimeIAPHelper.m in Sources */,
+				A61122601A0A978E00F0047D /* IAPHelper.m in Sources */,
 				A6F0EC611A08123600909E2C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -228,6 +382,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		A6159CEC1A098A3700CBCB3A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A6159CDF1A098A3600CBCB3A /* YDSKelime */;
+			targetProxy = A6159CEB1A098A3700CBCB3A /* PBXContainerItemProxy */;
+		};
 		A6F0EC721A08123600909E2C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A6F0EC5A1A08123600909E2C /* YDS Kelime Widget */;
@@ -244,17 +403,50 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		A6F0EC691A08123600909E2C /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A6F0EC6A1A08123600909E2C /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A6159CEF1A098A3700CBCB3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = YDSKelime/YDSKelime.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ahmet Yalcinkaya (4GA7VHNLUN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = YDSKelime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "858dab26-5a8e-41b9-9f7a-e0a4ea461901";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "YDSKelime/YDSKelime-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A6159CF01A098A3700CBCB3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = YDSKelime/YDSKelime.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ahmet Yalcinkaya (4GA7VHNLUN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = YDSKelime/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "858dab26-5a8e-41b9-9f7a-e0a4ea461901";
+				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "YDSKelime/YDSKelime-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		A6F0EC781A08123600909E2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -289,9 +481,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -325,8 +518,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -336,9 +530,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "YDS Kelime Widget/YDS Kelime Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ahmet Yalcinkaya (4GA7VHNLUN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "YDS Kelime Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2a29e625-ab4f-4c0d-bfb9-dbc8079332a9";
+				SWIFT_OBJC_BRIDGING_HEADER = "YDS Kelime Widget/YDS Kelime Widget-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -346,9 +550,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "YDS Kelime Widget/YDS Kelime Widget.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Ahmet Yalcinkaya (4GA7VHNLUN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = "YDS Kelime Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "2a29e625-ab4f-4c0d-bfb9-dbc8079332a9";
+				SWIFT_OBJC_BRIDGING_HEADER = "YDS Kelime Widget/YDS Kelime Widget-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -356,6 +569,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -367,6 +582,7 @@
 				INFOPLIST_FILE = "YDS Kelime WidgetTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YDS Kelime Widget.app/YDS Kelime Widget";
 			};
 			name = Debug;
@@ -375,6 +591,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -382,6 +600,7 @@
 				INFOPLIST_FILE = "YDS Kelime WidgetTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YDS Kelime Widget.app/YDS Kelime Widget";
 			};
 			name = Release;
@@ -389,6 +608,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A6159CEE1A098A3700CBCB3A /* Build configuration list for PBXNativeTarget "YDSKelime" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A6159CEF1A098A3700CBCB3A /* Debug */,
+				A6159CF01A098A3700CBCB3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A6F0EC561A08123600909E2C /* Build configuration list for PBXProject "YDS Kelime Widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -405,6 +633,7 @@
 				A6F0EC7C1A08123600909E2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A6F0EC7D1A08123600909E2C /* Build configuration list for PBXNativeTarget "YDS Kelime WidgetTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +642,7 @@
 				A6F0EC7F1A08123600909E2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

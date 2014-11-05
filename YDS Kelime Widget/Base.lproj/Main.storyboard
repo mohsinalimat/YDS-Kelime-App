@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JD3-Ki-st5">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--YDS Kelime-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +16,228 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="Ekranın en üstünden Bildirim Merkezi Ekranını aşağıya çekin " lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="43L-J5-bwR">
+                                <rect key="frame" x="20" y="282" width="560" height="22"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Bugün ekranının en altında bulunan Düzenle butonuna tıklayın." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3LA-sp-msC">
+                                <rect key="frame" x="20" y="324" width="560" height="22"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="YDS Kelime yazısının yanında bulunan + butonuna tıklayın. Ve Tamam butonuna basın." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QRg-QK-43m">
+                                <rect key="frame" x="20" y="366" width="560" height="44"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="widget" translatesAutoresizingMaskIntoConstraints="NO" id="DhX-RV-N0O">
+                                <rect key="frame" x="160" y="94" width="280" height="158"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="158" id="BDN-ax-tFb"/>
+                                    <constraint firstAttribute="width" constant="280" id="awu-N9-S62"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YDS Kelime Widget öğrenmeniz gereken kelimeleri size sunmaya başlayacaktır." lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="yUk-KS-DFs">
+                                <rect key="frame" x="20" y="430" width="560" height="160"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="18"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="43L-J5-bwR" firstAttribute="top" secondItem="DhX-RV-N0O" secondAttribute="bottom" constant="30" id="Gm0-zy-UNd"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="yUk-KS-DFs" secondAttribute="bottom" constant="10" id="NVD-gX-4Wd"/>
+                            <constraint firstItem="3LA-sp-msC" firstAttribute="top" secondItem="43L-J5-bwR" secondAttribute="bottom" constant="20" id="Rj1-2D-zi3"/>
+                            <constraint firstAttribute="trailing" secondItem="43L-J5-bwR" secondAttribute="trailing" constant="20" id="SV8-di-7oa"/>
+                            <constraint firstItem="3LA-sp-msC" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="c66-na-eOP"/>
+                            <constraint firstAttribute="trailing" secondItem="QRg-QK-43m" secondAttribute="trailing" constant="20" id="cCG-8B-4dw"/>
+                            <constraint firstItem="QRg-QK-43m" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="dBO-cb-Ume"/>
+                            <constraint firstItem="yUk-KS-DFs" firstAttribute="top" secondItem="QRg-QK-43m" secondAttribute="bottom" constant="20" id="edV-hD-7Qp"/>
+                            <constraint firstAttribute="trailing" secondItem="yUk-KS-DFs" secondAttribute="trailing" constant="20" id="kaQ-ZY-TRC"/>
+                            <constraint firstAttribute="centerX" secondItem="DhX-RV-N0O" secondAttribute="centerX" id="lVJ-6R-cl3"/>
+                            <constraint firstItem="DhX-RV-N0O" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="30" id="mEs-cQ-KgM"/>
+                            <constraint firstAttribute="trailing" secondItem="3LA-sp-msC" secondAttribute="trailing" constant="20" id="spL-oo-P4Y"/>
+                            <constraint firstItem="yUk-KS-DFs" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="tLY-xY-SUW"/>
+                            <constraint firstItem="43L-J5-bwR" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" constant="20" id="u9g-wp-fT1"/>
+                            <constraint firstItem="QRg-QK-43m" firstAttribute="top" secondItem="3LA-sp-msC" secondAttribute="bottom" constant="20" id="z07-uO-Wz4"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="YDS Kelime" id="FIN-Im-uaV">
+                        <barButtonItem key="backBarButtonItem" title=" " id="XSK-O5-0Ob"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1491" y="412"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jt9-iV-2iA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JD3-Ki-st5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NRT-qq-3Qn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.92549019607843142" green="0.94117647058823528" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.17254901960784313" green="0.24313725490196078" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="W4W-Z2-UjN" kind="relationship" relationship="rootViewController" id="q6s-tf-zEb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5zu-op-n2D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="191" y="400"/>
+        </scene>
+        <!--YDS Kelime-->
+        <scene sceneID="fZR-Id-qV4">
+            <objects>
+                <viewController id="W4W-Z2-UjN" customClass="ViewController" customModule="YDS_Kelime_Widget" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XF6-AX-ZYQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jdq-C6-ruB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="455-hv-jG2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVw-FR-7DG">
+                                <rect key="frame" x="20" y="546" width="560" height="34"/>
+                                <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="Widget Nasıl Eklenir">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="push" identifier="AddWidgetSegue" id="Rho-d2-ct2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2395 Kelime arasından 250 tanesini görüntülüyorsunuz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baC-hq-X1x">
+                                <rect key="frame" x="20" y="452" width="560" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jr-le-tDQ">
+                                <rect key="frame" x="20" y="492" width="560" height="34"/>
+                                <color key="backgroundColor" red="0.1803921568627451" green="0.80000000000000004" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="Tüm Kelimeleri Satın Al (2 TL)">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="buyButtonTapped:" destination="W4W-Z2-UjN" eventType="touchUpInside" id="0Ok-nA-xqX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abondon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OgQ-ZO-YQw">
+                                <rect key="frame" x="20" y="177" width="560" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="terk etmek,ayrılmak" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Iw-T7-3e9">
+                                <rect key="frame" x="20" y="221" width="560" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.58431372549019611" green="0.6470588235294118" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rth-6W-b8e">
+                                <rect key="frame" x="20" y="263" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Ov1-3i-LP4"/>
+                                </constraints>
+                                <state key="normal" title="Geri">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="prevTapped:" destination="W4W-Z2-UjN" eventType="touchUpInside" id="D6G-1p-PsN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWb-kp-eh8">
+                                <rect key="frame" x="300" y="263" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="İleri">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextTapped:" destination="W4W-Z2-UjN" eventType="touchUpInside" id="ONa-Ub-5Mv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOh-Lt-3Lh">
+                                <rect key="frame" x="274" y="104" width="53" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="53" id="Lfw-Dc-Es2"/>
+                                    <constraint firstAttribute="height" constant="53" id="uYo-wM-fJi"/>
+                                </constraints>
+                                <state key="normal" image="volume">
+                                    <color key="titleColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="voiceTapped:" destination="W4W-Z2-UjN" eventType="touchUpInside" id="ra8-rj-h82"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="OgQ-ZO-YQw" firstAttribute="top" secondItem="tOh-Lt-3Lh" secondAttribute="bottom" constant="20" id="0Ip-h0-nyd"/>
+                            <constraint firstItem="4Iw-T7-3e9" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="1Fp-Bw-QwR"/>
+                            <constraint firstAttribute="trailing" secondItem="OgQ-ZO-YQw" secondAttribute="trailing" constant="20" id="2jJ-5C-x0i"/>
+                            <constraint firstItem="tOh-Lt-3Lh" firstAttribute="top" secondItem="XF6-AX-ZYQ" secondAttribute="bottom" constant="40" id="9Ql-7T-nB0"/>
+                            <constraint firstAttribute="trailing" secondItem="4Iw-T7-3e9" secondAttribute="trailing" constant="20" id="CKN-tO-vJu"/>
+                            <constraint firstItem="bWb-kp-eh8" firstAttribute="top" secondItem="rth-6W-b8e" secondAttribute="top" id="Eos-zN-uRV"/>
+                            <constraint firstItem="rth-6W-b8e" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="Fn9-dA-gAB"/>
+                            <constraint firstItem="rth-6W-b8e" firstAttribute="top" secondItem="4Iw-T7-3e9" secondAttribute="bottom" constant="20" id="GtH-YC-gfN"/>
+                            <constraint firstItem="WVw-FR-7DG" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="J17-Us-78v"/>
+                            <constraint firstItem="3Jr-le-tDQ" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="Jek-iF-c2b"/>
+                            <constraint firstItem="bWb-kp-eh8" firstAttribute="leading" secondItem="rth-6W-b8e" secondAttribute="trailing" id="Jh8-gf-Ulk"/>
+                            <constraint firstItem="bWb-kp-eh8" firstAttribute="width" secondItem="rth-6W-b8e" secondAttribute="width" id="MAQ-hw-nQV"/>
+                            <constraint firstItem="WVw-FR-7DG" firstAttribute="top" secondItem="3Jr-le-tDQ" secondAttribute="bottom" constant="20" id="SlD-PC-8oS"/>
+                            <constraint firstAttribute="trailing" secondItem="3Jr-le-tDQ" secondAttribute="trailing" constant="20" id="Uit-sL-oyd"/>
+                            <constraint firstItem="tOh-Lt-3Lh" firstAttribute="centerX" secondItem="OgQ-ZO-YQw" secondAttribute="centerX" id="Zcn-Ir-bOX"/>
+                            <constraint firstAttribute="trailing" secondItem="bWb-kp-eh8" secondAttribute="trailing" constant="20" id="aJd-5s-QSu"/>
+                            <constraint firstItem="3Jr-le-tDQ" firstAttribute="top" secondItem="baC-hq-X1x" secondAttribute="bottom" constant="20" id="ake-Yf-zk3"/>
+                            <constraint firstAttribute="trailing" secondItem="baC-hq-X1x" secondAttribute="trailing" constant="20" id="aum-7q-YGr"/>
+                            <constraint firstItem="bWb-kp-eh8" firstAttribute="leading" secondItem="rth-6W-b8e" secondAttribute="trailing" id="bsF-W9-CGS"/>
+                            <constraint firstItem="baC-hq-X1x" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="dV2-Ty-HwR"/>
+                            <constraint firstItem="bWb-kp-eh8" firstAttribute="height" secondItem="rth-6W-b8e" secondAttribute="height" id="fmC-ad-mmf"/>
+                            <constraint firstItem="OgQ-ZO-YQw" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="gtH-9n-mNb"/>
+                            <constraint firstItem="4Iw-T7-3e9" firstAttribute="top" secondItem="OgQ-ZO-YQw" secondAttribute="bottom" constant="15" id="inb-iP-y1S"/>
+                            <constraint firstAttribute="trailing" secondItem="WVw-FR-7DG" secondAttribute="trailing" constant="20" id="mE5-fV-u2P"/>
+                            <constraint firstItem="Jdq-C6-ruB" firstAttribute="top" secondItem="WVw-FR-7DG" secondAttribute="bottom" constant="20" id="xEL-dV-wjw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="YDS Kelime" id="rUg-KN-KD8">
+                        <barButtonItem key="backBarButtonItem" title=" " id="C0e-2c-sg0"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="descLabel" destination="baC-hq-X1x" id="knK-AF-r3r"/>
+                        <outlet property="meaningLabel" destination="4Iw-T7-3e9" id="BUf-FJ-VUE"/>
+                        <outlet property="purchaseButton" destination="3Jr-le-tDQ" id="7EO-cz-UJx"/>
+                        <outlet property="wordLabel" destination="OgQ-ZO-YQw" id="MEc-2X-Wmv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qnh-0A-ep7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="838" y="412"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="volume" width="53" height="53"/>
+        <image name="widget" width="280" height="158"/>
+    </resources>
 </document>

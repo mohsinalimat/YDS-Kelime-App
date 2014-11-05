@@ -16,6 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        KelimeIAPHelper.sharedInstance()
+        
+        let path = NSBundle.mainBundle().pathForResource("words.plist", ofType: nil)
+        var wordList = NSArray(contentsOfFile: path!)
+        
+        var sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
+        
+        sharedDefaults.setObject(wordList, forKey:"wordList")
+        
+        var isPurchased = sharedDefaults.boolForKey("isPurchased")
+        
+        sharedDefaults.setBool(isPurchased, forKey: "isPurchased")
+
+        sharedDefaults.synchronize()
+        
         return true
     }
 
