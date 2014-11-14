@@ -124,13 +124,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2395 Kelime arasından 250 tanesini görüntülüyorsunuz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baC-hq-X1x">
-                                <rect key="frame" x="20" y="452" width="560" height="20"/>
+                                <rect key="frame" x="20" y="432" width="560" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jr-le-tDQ">
-                                <rect key="frame" x="20" y="492" width="560" height="34"/>
+                                <rect key="frame" x="20" y="462" width="560" height="34"/>
                                 <color key="backgroundColor" red="0.1803921568627451" green="0.80000000000000004" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                 <state key="normal" title="Tüm Kelimeleri Satın Al (2 TL)">
@@ -191,34 +191,48 @@
                                     <action selector="voiceTapped:" destination="W4W-Z2-UjN" eventType="touchUpInside" id="ra8-rj-h82"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XE-No-VYY">
+                                <rect key="frame" x="421" y="504" width="159" height="34"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                                <state key="normal" title="Zaten satın aldınız mı?">
+                                    <color key="titleColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="restoreButtonTapped:" destination="W4W-Z2-UjN" eventType="touchUpInside" id="phk-Mw-n5y"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="OgQ-ZO-YQw" firstAttribute="top" secondItem="tOh-Lt-3Lh" secondAttribute="bottom" constant="20" id="0Ip-h0-nyd"/>
                             <constraint firstItem="4Iw-T7-3e9" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="1Fp-Bw-QwR"/>
                             <constraint firstAttribute="trailing" secondItem="OgQ-ZO-YQw" secondAttribute="trailing" constant="20" id="2jJ-5C-x0i"/>
+                            <constraint firstItem="baC-hq-X1x" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rth-6W-b8e" secondAttribute="bottom" constant="5" id="755-nL-t0m"/>
                             <constraint firstItem="tOh-Lt-3Lh" firstAttribute="top" secondItem="XF6-AX-ZYQ" secondAttribute="bottom" constant="40" id="9Ql-7T-nB0"/>
                             <constraint firstAttribute="trailing" secondItem="4Iw-T7-3e9" secondAttribute="trailing" constant="20" id="CKN-tO-vJu"/>
                             <constraint firstItem="bWb-kp-eh8" firstAttribute="top" secondItem="rth-6W-b8e" secondAttribute="top" id="Eos-zN-uRV"/>
                             <constraint firstItem="rth-6W-b8e" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="Fn9-dA-gAB"/>
+                            <constraint firstItem="7XE-No-VYY" firstAttribute="trailing" secondItem="3Jr-le-tDQ" secondAttribute="trailing" id="Fq9-iF-Uiy"/>
                             <constraint firstItem="rth-6W-b8e" firstAttribute="top" secondItem="4Iw-T7-3e9" secondAttribute="bottom" constant="20" id="GtH-YC-gfN"/>
                             <constraint firstItem="WVw-FR-7DG" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="J17-Us-78v"/>
                             <constraint firstItem="3Jr-le-tDQ" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="Jek-iF-c2b"/>
                             <constraint firstItem="bWb-kp-eh8" firstAttribute="leading" secondItem="rth-6W-b8e" secondAttribute="trailing" id="Jh8-gf-Ulk"/>
                             <constraint firstItem="bWb-kp-eh8" firstAttribute="width" secondItem="rth-6W-b8e" secondAttribute="width" id="MAQ-hw-nQV"/>
-                            <constraint firstItem="WVw-FR-7DG" firstAttribute="top" secondItem="3Jr-le-tDQ" secondAttribute="bottom" constant="20" id="SlD-PC-8oS"/>
                             <constraint firstAttribute="trailing" secondItem="3Jr-le-tDQ" secondAttribute="trailing" constant="20" id="Uit-sL-oyd"/>
                             <constraint firstItem="tOh-Lt-3Lh" firstAttribute="centerX" secondItem="OgQ-ZO-YQw" secondAttribute="centerX" id="Zcn-Ir-bOX"/>
                             <constraint firstAttribute="trailing" secondItem="bWb-kp-eh8" secondAttribute="trailing" constant="20" id="aJd-5s-QSu"/>
-                            <constraint firstItem="3Jr-le-tDQ" firstAttribute="top" secondItem="baC-hq-X1x" secondAttribute="bottom" constant="20" id="ake-Yf-zk3"/>
+                            <constraint firstItem="3Jr-le-tDQ" firstAttribute="top" secondItem="baC-hq-X1x" secondAttribute="bottom" constant="10" id="ake-Yf-zk3"/>
                             <constraint firstAttribute="trailing" secondItem="baC-hq-X1x" secondAttribute="trailing" constant="20" id="aum-7q-YGr"/>
                             <constraint firstItem="bWb-kp-eh8" firstAttribute="leading" secondItem="rth-6W-b8e" secondAttribute="trailing" id="bsF-W9-CGS"/>
                             <constraint firstItem="baC-hq-X1x" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="dV2-Ty-HwR"/>
                             <constraint firstItem="bWb-kp-eh8" firstAttribute="height" secondItem="rth-6W-b8e" secondAttribute="height" id="fmC-ad-mmf"/>
                             <constraint firstItem="OgQ-ZO-YQw" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="gtH-9n-mNb"/>
                             <constraint firstItem="4Iw-T7-3e9" firstAttribute="top" secondItem="OgQ-ZO-YQw" secondAttribute="bottom" constant="15" id="inb-iP-y1S"/>
+                            <constraint firstItem="WVw-FR-7DG" firstAttribute="top" secondItem="7XE-No-VYY" secondAttribute="bottom" constant="8" id="jwA-qZ-8JR"/>
                             <constraint firstAttribute="trailing" secondItem="WVw-FR-7DG" secondAttribute="trailing" constant="20" id="mE5-fV-u2P"/>
                             <constraint firstItem="Jdq-C6-ruB" firstAttribute="top" secondItem="WVw-FR-7DG" secondAttribute="bottom" constant="20" id="xEL-dV-wjw"/>
+                            <constraint firstItem="7XE-No-VYY" firstAttribute="top" secondItem="3Jr-le-tDQ" secondAttribute="bottom" constant="8" id="yC8-qP-50T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="YDS Kelime" id="rUg-KN-KD8">

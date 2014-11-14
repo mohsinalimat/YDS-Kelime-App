@@ -17,10 +17,19 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet var meaningLabel: UILabel!
 
     var count:NSInteger = 0
-    
+    var synth:AVSpeechSynthesizer!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
+        self.synth = AVSpeechSynthesizer()
+
+        // iOS 8 bug fix
+        var dummyUtterance:AVSpeechUtterance = AVSpeechUtterance(string:" ")
+        dummyUtterance.voice = AVSpeechSynthesisVoice()
+        dummyUtterance.rate = AVSpeechUtteranceMaximumSpeechRate
+        self.synth.speakUtterance(dummyUtterance)
+        
         
         var sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
         
@@ -50,11 +59,10 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     @IBAction func voiceTapped(sender: AnyObject) {
-        var synth:AVSpeechSynthesizer = AVSpeechSynthesizer()
         var utterance:AVSpeechUtterance = AVSpeechUtterance(string:wordLabel.text)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         utterance.rate = 0.05
-        synth.speakUtterance(utterance)
+        self.synth.speakUtterance(utterance)
     }
     
     @IBAction func nextTapped(sender: AnyObject) {

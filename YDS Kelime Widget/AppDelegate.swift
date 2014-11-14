@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Crashlytics
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,6 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         sharedDefaults.setBool(isPurchased, forKey: "isPurchased")
 
         sharedDefaults.synchronize()
+        
+        Crashlytics.startWithAPIKey("5aa5aba631dfa9d92fb2e27e77c999c825506051")
         
         return true
     }

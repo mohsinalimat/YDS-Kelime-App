@@ -154,8 +154,8 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
 {
     NSLog(@"completeTransaction...");
     
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Bought successfully!"
-                                                      message:@"Thank you for your purchase. Enjoy!"
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Satın alma başarılı!"
+                                                      message:@"Ürünü satın aldığınız için teşekkürler."
                                                      delegate:nil
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
@@ -171,8 +171,8 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
 {
     NSLog(@"restoreTransaction...");
     
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Restored successfully!"
-                                                      message:@"Enjoy!"
+    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"İşleminiz başarıyla tamamlandı!"
+                                                      message:@"İyi eğlenceler!"
                                                      delegate:nil
                                             cancelButtonTitle:@"OK"
                                             otherButtonTitles:nil];
@@ -191,7 +191,7 @@ NSString *const IAPHelperProductPurchasedNotification = @"IAPHelperProductPurcha
     {
         NSLog(@"Transaction error: %@", transaction.error.localizedDescription);
        
-        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Ups!"
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Hata! Yeniden Deneyiniz"
                                                           message:transaction.error.localizedDescription
                                                          delegate:nil
                                                 cancelButtonTitle:@"OK"

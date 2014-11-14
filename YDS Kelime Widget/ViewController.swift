@@ -22,11 +22,20 @@ class ViewController: UIViewController {
     @IBOutlet var purchaseButton: UIButton!
     @IBOutlet var descLabel: UILabel!
     
+    var synth:AVSpeechSynthesizer!
     var count:NSInteger = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view from its nib.
+        self.synth = AVSpeechSynthesizer()
+
+        // iOS 8 bug fix
+        var dummyUtterance:AVSpeechUtterance = AVSpeechUtterance(string:" ")
+        dummyUtterance.voice = AVSpeechSynthesisVoice()
+        dummyUtterance.rate = AVSpeechUtteranceMaximumSpeechRate
+        self.synth.speakUtterance(dummyUtterance)
+        
         
         var sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
         
@@ -102,6 +111,10 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func restoreButtonTapped(sender: AnyObject) {
+        KelimeIAPHelper.sharedInstance().restoreCompletedTransactions()
+    }
+    
     func productPurchased(notification: NSNotification) {
         var productIdentifier: NSString = notification.object as NSString
         
@@ -164,11 +177,12 @@ class ViewController: UIViewController {
     }
     
     @IBAction func voiceTapped(sender: AnyObject) {
-        var synth:AVSpeechSynthesizer = AVSpeechSynthesizer()
-        var utterance:AVSpeechUtterance = AVSpeechUtterance(string:wordLabel.text)
+        var text =  wordLabel.text
+        var utterance:AVSpeechUtterance = AVSpeechUtterance(string:text)
+        
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         utterance.rate = 0.05
-        synth.speakUtterance(utterance)
+        self.synth.speakUtterance(utterance)
     }
     
     @IBAction func nextTapped(sender: AnyObject) {

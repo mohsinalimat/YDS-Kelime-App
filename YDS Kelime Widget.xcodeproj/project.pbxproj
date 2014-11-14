@@ -17,6 +17,7 @@
 		A6159CED1A098A3700CBCB3A /* YDSKelime.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A6159CE01A098A3700CBCB3A /* YDSKelime.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A6159CF21A098F3F00CBCB3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F0EC671A08123600909E2C /* Images.xcassets */; };
 		A64585611A099A6800943A3A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64585601A099A6800943A3A /* AVFoundation.framework */; };
+		A6A34C9F1A0B89880060404B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A34C9E1A0B89880060404B /* Crashlytics.framework */; };
 		A6EC280C1A0A328000AF9547 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64585601A099A6800943A3A /* AVFoundation.framework */; };
 		A6F0EC611A08123600909E2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0EC601A08123600909E2C /* AppDelegate.swift */; };
 		A6F0EC631A08123600909E2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0EC621A08123600909E2C /* ViewController.swift */; };
@@ -72,6 +73,8 @@
 		A6159CF51A09972400CBCB3A /* YDS Kelime Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "YDS Kelime Widget.entitlements"; sourceTree = "<group>"; };
 		A64585601A099A6800943A3A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A64585631A099B3300943A3A /* YDS Kelime Widget-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YDS Kelime Widget-Bridging-Header.h"; sourceTree = "<group>"; };
+		A6A34C9B1A0B87CF0060404B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		A6A34C9E1A0B89880060404B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		A6EC280D1A0A32A900AF9547 /* YDSKelime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YDSKelime-Bridging-Header.h"; sourceTree = "<group>"; };
 		A6F0EC5B1A08123600909E2C /* YDS Kelime Widget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YDS Kelime Widget.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F0EC5F1A08123600909E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A6A34C9F1A0B89880060404B /* Crashlytics.framework in Frameworks */,
 				A64585611A099A6800943A3A /* AVFoundation.framework in Frameworks */,
 				A61122591A0A969000F0047D /* StoreKit.framework in Frameworks */,
 			);
@@ -116,6 +120,7 @@
 		A6159CE11A098A3700CBCB3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A6A34C9E1A0B89880060404B /* Crashlytics.framework */,
 				A61122581A0A969000F0047D /* StoreKit.framework */,
 				A64585601A099A6800943A3A /* AVFoundation.framework */,
 				A6159CE21A098A3700CBCB3A /* NotificationCenter.framework */,
@@ -179,6 +184,7 @@
 				A64585631A099B3300943A3A /* YDS Kelime Widget-Bridging-Header.h */,
 				A61122611A0A994D00F0047D /* KelimeIAPHelper.h */,
 				A61122621A0A994D00F0047D /* KelimeIAPHelper.m */,
+				A6A34C9B1A0B87CF0060404B /* Crashlytics.framework */,
 			);
 			path = "YDS Kelime Widget";
 			sourceTree = "<group>";
@@ -236,6 +242,7 @@
 				A6F0EC581A08123600909E2C /* Frameworks */,
 				A6F0EC591A08123600909E2C /* Resources */,
 				A6159CF11A098A3700CBCB3A /* Embed App Extensions */,
+				A6A34C9A1A0B86830060404B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -350,6 +357,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A6A34C9A1A0B86830060404B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Crashlytics.framework/run 5aa5aba631dfa9d92fb2e27e77c999c825506051 930fda092f21fc65c167e65f012f947870717b25e75ca2ca0d5b42172ac59de7";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A6159CDC1A098A3600CBCB3A /* Sources */ = {
@@ -536,6 +559,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ahmet Yalcinkaya (4GA7VHNLUN)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YDS",
+					Kelime,
+					Widget,
+					"$(PROJECT_DIR)/YDS",
+					Kelime,
+					Widget,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "YDS Kelime Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -556,6 +589,16 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Ahmet Yalcinkaya (4GA7VHNLUN)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/YDS",
+					Kelime,
+					Widget,
+					"$(PROJECT_DIR)/YDS",
+					Kelime,
+					Widget,
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "YDS Kelime Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
