@@ -3,5 +3,5 @@
 //
 
 #import <AVFoundation/AVFoundation.h>
-#import "IAPHelper.h"
-#import "KelimeIAPHelper.h"
+#import <Parse/Parse.h>
+#import "CTFeedbackViewController.h"

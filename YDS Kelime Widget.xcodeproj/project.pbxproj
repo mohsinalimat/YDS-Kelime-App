@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14769A13D45AC846263DB099 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B63DC1E059E200BAFCBBEAC /* libPods.a */; };
 		A61122591A0A969000F0047D /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A61122581A0A969000F0047D /* StoreKit.framework */; };
-		A61122601A0A978E00F0047D /* IAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A611225F1A0A978E00F0047D /* IAPHelper.m */; };
-		A61122631A0A994D00F0047D /* KelimeIAPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = A61122621A0A994D00F0047D /* KelimeIAPHelper.m */; };
 		A6159CDB1A0987A100CBCB3A /* words.plist in Resources */ = {isa = PBXBuildFile; fileRef = A6159CDA1A0987A100CBCB3A /* words.plist */; };
 		A6159CE31A098A3700CBCB3A /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6159CE21A098A3700CBCB3A /* NotificationCenter.framework */; };
 		A6159CE81A098A3700CBCB3A /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6159CE71A098A3700CBCB3A /* TodayViewController.swift */; };
@@ -17,6 +16,8 @@
 		A6159CED1A098A3700CBCB3A /* YDSKelime.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A6159CE01A098A3700CBCB3A /* YDSKelime.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A6159CF21A098F3F00CBCB3A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A6F0EC671A08123600909E2C /* Images.xcassets */; };
 		A64585611A099A6800943A3A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64585601A099A6800943A3A /* AVFoundation.framework */; };
+		A6487D591A82BB63009BE91E /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6487D581A82BB63009BE91E /* IAPHelper.swift */; };
+		A6487D5C1A82BBA7009BE91E /* KelimeIAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6487D5B1A82BBA7009BE91E /* KelimeIAPHelper.swift */; };
 		A6A34C9F1A0B89880060404B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A34C9E1A0B89880060404B /* Crashlytics.framework */; };
 		A6EC280C1A0A328000AF9547 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64585601A099A6800943A3A /* AVFoundation.framework */; };
 		A6F0EC611A08123600909E2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0EC601A08123600909E2C /* AppDelegate.swift */; };
@@ -58,11 +59,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0B63DC1E059E200BAFCBBEAC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F6418B59E7C0FA19E1722DA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A61122581A0A969000F0047D /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		A611225E1A0A978E00F0047D /* IAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAPHelper.h; sourceTree = "<group>"; };
-		A611225F1A0A978E00F0047D /* IAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAPHelper.m; sourceTree = "<group>"; };
-		A61122611A0A994D00F0047D /* KelimeIAPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KelimeIAPHelper.h; sourceTree = "<group>"; };
-		A61122621A0A994D00F0047D /* KelimeIAPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KelimeIAPHelper.m; sourceTree = "<group>"; };
 		A6159CDA1A0987A100CBCB3A /* words.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = words.plist; sourceTree = "<group>"; };
 		A6159CE01A098A3700CBCB3A /* YDSKelime.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = YDSKelime.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6159CE21A098A3700CBCB3A /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
@@ -73,6 +72,8 @@
 		A6159CF51A09972400CBCB3A /* YDS Kelime Widget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "YDS Kelime Widget.entitlements"; sourceTree = "<group>"; };
 		A64585601A099A6800943A3A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A64585631A099B3300943A3A /* YDS Kelime Widget-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YDS Kelime Widget-Bridging-Header.h"; sourceTree = "<group>"; };
+		A6487D581A82BB63009BE91E /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IAPHelper.swift; path = Class/IAPHelper.swift; sourceTree = "<group>"; };
+		A6487D5B1A82BBA7009BE91E /* KelimeIAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KelimeIAPHelper.swift; path = Class/KelimeIAPHelper.swift; sourceTree = "<group>"; };
 		A6A34C9B1A0B87CF0060404B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		A6A34C9E1A0B89880060404B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		A6EC280D1A0A32A900AF9547 /* YDSKelime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YDSKelime-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -85,6 +86,7 @@
 		A6F0EC701A08123600909E2C /* YDS Kelime WidgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YDS Kelime WidgetTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F0EC751A08123600909E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6F0EC761A08123600909E2C /* YDS_Kelime_WidgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDS_Kelime_WidgetTests.swift; sourceTree = "<group>"; };
+		EB014A6496BAC05A99D8B627 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				A6A34C9F1A0B89880060404B /* Crashlytics.framework in Frameworks */,
 				A64585611A099A6800943A3A /* AVFoundation.framework in Frameworks */,
 				A61122591A0A969000F0047D /* StoreKit.framework in Frameworks */,
+				14769A13D45AC846263DB099 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -117,6 +120,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		34A1A259451A7B1B8FC4D57D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB014A6496BAC05A99D8B627 /* Pods.debug.xcconfig */,
+				6F6418B59E7C0FA19E1722DA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		A6159CE11A098A3700CBCB3A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +136,7 @@
 				A61122581A0A969000F0047D /* StoreKit.framework */,
 				A64585601A099A6800943A3A /* AVFoundation.framework */,
 				A6159CE21A098A3700CBCB3A /* NotificationCenter.framework */,
+				0B63DC1E059E200BAFCBBEAC /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,6 +161,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		A6487D5A1A82BB6A009BE91E /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				A6487D581A82BB63009BE91E /* IAPHelper.swift */,
+				A6487D5B1A82BBA7009BE91E /* KelimeIAPHelper.swift */,
+			);
+			name = Class;
+			sourceTree = "<group>";
+		};
 		A6F0EC521A08123600909E2C = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +178,7 @@
 				A6159CE41A098A3700CBCB3A /* YDSKelime */,
 				A6159CE11A098A3700CBCB3A /* Frameworks */,
 				A6F0EC5C1A08123600909E2C /* Products */,
+				34A1A259451A7B1B8FC4D57D /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -179,12 +202,9 @@
 				A6F0EC671A08123600909E2C /* Images.xcassets */,
 				A6F0EC5E1A08123600909E2C /* Supporting Files */,
 				A6159CDA1A0987A100CBCB3A /* words.plist */,
-				A611225E1A0A978E00F0047D /* IAPHelper.h */,
-				A611225F1A0A978E00F0047D /* IAPHelper.m */,
 				A64585631A099B3300943A3A /* YDS Kelime Widget-Bridging-Header.h */,
-				A61122611A0A994D00F0047D /* KelimeIAPHelper.h */,
-				A61122621A0A994D00F0047D /* KelimeIAPHelper.m */,
 				A6A34C9B1A0B87CF0060404B /* Crashlytics.framework */,
+				A6487D5A1A82BB6A009BE91E /* Class */,
 			);
 			path = "YDS Kelime Widget";
 			sourceTree = "<group>";
@@ -238,11 +258,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6F0EC7A1A08123600909E2C /* Build configuration list for PBXNativeTarget "YDS Kelime Widget" */;
 			buildPhases = (
+				EC047EDEBA94F7DB879200E5 /* Check Pods Manifest.lock */,
 				A6F0EC571A08123600909E2C /* Sources */,
 				A6F0EC581A08123600909E2C /* Frameworks */,
 				A6F0EC591A08123600909E2C /* Resources */,
 				A6159CF11A098A3700CBCB3A /* Embed App Extensions */,
 				A6A34C9A1A0B86830060404B /* ShellScript */,
+				D215E7285C32D3FAFE7A613E /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,6 +394,36 @@
 			shellPath = /bin/sh;
 			shellScript = "./Crashlytics.framework/run 5aa5aba631dfa9d92fb2e27e77c999c825506051 930fda092f21fc65c167e65f012f947870717b25e75ca2ca0d5b42172ac59de7";
 		};
+		D215E7285C32D3FAFE7A613E /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC047EDEBA94F7DB879200E5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -388,8 +440,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A6F0EC631A08123600909E2C /* ViewController.swift in Sources */,
-				A61122631A0A994D00F0047D /* KelimeIAPHelper.m in Sources */,
-				A61122601A0A978E00F0047D /* IAPHelper.m in Sources */,
+				A6487D5C1A82BBA7009BE91E /* KelimeIAPHelper.swift in Sources */,
+				A6487D591A82BB63009BE91E /* IAPHelper.swift in Sources */,
 				A6F0EC611A08123600909E2C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,7 +486,7 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = YDSKelime/YDSKelime.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Ahmet Yalcinkaya (4GA7VHNLUN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -444,7 +496,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "858dab26-5a8e-41b9-9f7a-e0a4ea461901";
+				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "YDSKelime/YDSKelime-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -457,13 +509,13 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = YDSKelime/YDSKelime.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Ahmet Yalcinkaya (4GA7VHNLUN)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = YDSKelime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "858dab26-5a8e-41b9-9f7a-e0a4ea461901";
+				PROVISIONING_PROFILE = "0ad457c5-e962-48e2-a79c-f23b85d5429a";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "YDSKelime/YDSKelime-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -551,6 +603,7 @@
 		};
 		A6F0EC7B1A08123600909E2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB014A6496BAC05A99D8B627 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -572,7 +625,7 @@
 				INFOPLIST_FILE = "YDS Kelime Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2a29e625-ab4f-4c0d-bfb9-dbc8079332a9";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "YDS Kelime Widget/YDS Kelime Widget-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -581,6 +634,7 @@
 		};
 		A6F0EC7C1A08123600909E2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F6418B59E7C0FA19E1722DA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -602,7 +656,7 @@
 				INFOPLIST_FILE = "YDS Kelime Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "2a29e625-ab4f-4c0d-bfb9-dbc8079332a9";
+				PROVISIONING_PROFILE = "51d38d72-a2a8-4345-a984-e2322adad5bd";
 				SWIFT_OBJC_BRIDGING_HEADER = "YDS Kelime Widget/YDS Kelime Widget-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

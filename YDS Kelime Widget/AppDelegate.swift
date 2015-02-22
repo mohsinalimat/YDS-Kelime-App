@@ -18,24 +18,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        KelimeIAPHelper.sharedInstance()
-        
         let path = NSBundle.mainBundle().pathForResource("words.plist", ofType: nil)
         var wordList = NSArray(contentsOfFile: path!)
         
+        
         var sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
-        
         sharedDefaults.setObject(wordList, forKey:"wordList")
-        
-        var isPurchased = sharedDefaults.boolForKey("isPurchased")
-        
-        sharedDefaults.setBool(isPurchased, forKey: "isPurchased")
-
         sharedDefaults.synchronize()
+        
         
         Crashlytics.startWithAPIKey("5aa5aba631dfa9d92fb2e27e77c999c825506051")
         
+        Parse.setApplicationId("2DwWlHvql0nHep1hjqzofhJhyJ77veN6Vz5uPxx3", clientKey: "54o1Gt3dbxQPj40pVppRiRUfjkq3436ZZqhLjrZz")
+        PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
+        
+        if application.respondsToSelector("isRegisteredForRemoteNotifications") {
+            // iOS 8 Notifications
+            application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound | UIUserNotificationType.Alert | UIUserNotificationType.Badge, categories: nil))
+            application.registerForRemoteNotifications()
+        }
+        
         return true
+    }
+    
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData) {
+        let currentInstallation:PFInstallation = PFInstallation.currentInstallation()
+        currentInstallation.setDeviceTokenFromData(deviceToken)
+        currentInstallation.saveInBackgroundWithBlock(nil)
+    }
+    
+    func application(application: UIApplication, didReceiveRemoteNotification userInfo: [NSObject : AnyObject]) {
+        
+        if let url:String = userInfo["url"] as? String {
+            UIApplication.sharedApplication().openURL(NSURL(string: url)!)
+        }
+        else {
+            PFPush.handlePush(userInfo)
+        }
     }
 
     func applicationWillResignActive(application: UIApplication) {

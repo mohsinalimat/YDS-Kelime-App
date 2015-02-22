@@ -7,14 +7,12 @@
 //
 
 import UIKit
+import StoreKit
 
 class ViewController: UIViewController {
 
     var wordList: NSArray!
     var products: NSArray!
-
-    var priceFormatter: NSNumberFormatter!
-
     
     @IBOutlet var wordLabel: UILabel!
     @IBOutlet var meaningLabel: UILabel!
@@ -45,7 +43,7 @@ class ViewController: UIViewController {
         
         if let arr = sharedDefaults.objectForKey("wordList") as? NSArray {
             
-            var isPurchased:Bool = sharedDefaults.boolForKey("isPurchased")
+            let isPurchased:Bool = sharedDefaults.boolForKey("isPurchased")
             
             if(isPurchased)
             {
@@ -55,12 +53,27 @@ class ViewController: UIViewController {
                 updateUI()
             }
             else {
-                wordList = shuffle(arr.subarrayWithRange(NSMakeRange(0, 250)))
+                
+                if arr.count < 400 {
+                    wordList = shuffle(arr.subarrayWithRange(NSMakeRange(0, arr.count)))
+                }
+                else {
+                    wordList = shuffle(arr.subarrayWithRange(NSMakeRange(0, 400)))
+                }
+                
                 updateUI()
             }
         }
         
         //TODO: widget ekle türkçe bilgiler
+    }
+    
+    @IBAction func feedbackTapped(sender: AnyObject) {
+        
+        var feedbackViewController:CTFeedbackViewController = CTFeedbackViewController(topics: CTFeedbackViewController.defaultTopics(), localizedTopics: CTFeedbackViewController.defaultTopics())
+        feedbackViewController.toRecipients = ["ahmet@guncelcaps.com"]
+        feedbackViewController.useHTML = false
+        self.navigationController?.pushViewController(feedbackViewController, animated: true)
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -69,7 +82,7 @@ class ViewController: UIViewController {
         
         var sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
         
-        var isPurchased = sharedDefaults.boolForKey("isPurchased")
+        let isPurchased = sharedDefaults.boolForKey("isPurchased")
         
         if ( isPurchased ) {
             
@@ -82,11 +95,8 @@ class ViewController: UIViewController {
             self.reload()
             NSNotificationCenter.defaultCenter().addObserver(self, selector:"productPurchased:", name:IAPHelperProductPurchasedNotification, object: nil)
         }
-
         
-        self.priceFormatter = NSNumberFormatter()
-        self.priceFormatter.formatterBehavior = NSNumberFormatterBehavior.Behavior10_4
-        self.priceFormatter.numberStyle = .CurrencyStyle
+
         
     }
     
@@ -100,9 +110,9 @@ class ViewController: UIViewController {
         if((products) != nil) {
             
             if(products.count > 0) {
-                var product: SKProduct = products[0] as SKProduct
+                let product: SKProduct = products[0] as SKProduct
                 
-                KelimeIAPHelper.sharedInstance().buyProduct(product)
+                KelimeIAPHelper.shared.buyProduct(product)
 
             }
         
@@ -112,7 +122,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func restoreButtonTapped(sender: AnyObject) {
-        KelimeIAPHelper.sharedInstance().restoreCompletedTransactions()
+        KelimeIAPHelper.shared.restoreCompletedTransactions()
     }
     
     func productPurchased(notification: NSNotification) {
@@ -152,21 +162,16 @@ class ViewController: UIViewController {
     
     func reload() {
         self.products = nil
-        KelimeIAPHelper.sharedInstance().requestProductsWithCompletionHandler { (success, products) -> Void in
+        KelimeIAPHelper.shared.requestProductsWithCompletionHandler { (success, products) -> Void in
             if(success) {
                 self.products = products
-                var product: SKProduct = products[0] as SKProduct
-                var price = product.price.floatValue
-                var currency = product.price
-                
-                self.purchaseButton.setTitle("Tüm Kelimeleri Satın Al (\(price))", forState:UIControlState.Normal)
             }
         }
         
     }
     
     func restoreTapped(sender: AnyObject) {
-        KelimeIAPHelper.sharedInstance().restoreCompletedTransactions()
+        KelimeIAPHelper.shared.restoreCompletedTransactions()
     }
     
     func updateUI() {

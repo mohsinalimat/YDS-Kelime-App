@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JD3-Ki-st5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C106a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JD3-Ki-st5">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--YDS Kelime-->
@@ -123,14 +123,14 @@
                                     <segue destination="vXZ-lx-hvc" kind="push" identifier="AddWidgetSegue" id="Rho-d2-ct2"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2395 Kelime arasından 250 tanesini görüntülüyorsunuz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baC-hq-X1x">
-                                <rect key="frame" x="20" y="432" width="560" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2395 Kelime arasından 400 tanesini görüntülüyorsunuz." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="baC-hq-X1x">
+                                <rect key="frame" x="20" y="434" width="560" height="20"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Jr-le-tDQ">
-                                <rect key="frame" x="20" y="462" width="560" height="34"/>
+                                <rect key="frame" x="20" y="464" width="560" height="34"/>
                                 <color key="backgroundColor" red="0.1803921568627451" green="0.80000000000000004" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
                                 <state key="normal" title="Tüm Kelimeleri Satın Al (2 TL)">
@@ -142,19 +142,19 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="abondon" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OgQ-ZO-YQw">
-                                <rect key="frame" x="20" y="177" width="560" height="29"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <rect key="frame" x="20" y="147" width="560" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                 <color key="textColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="terk etmek,ayrılmak" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4Iw-T7-3e9">
-                                <rect key="frame" x="20" y="221" width="560" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <rect key="frame" x="20" y="177" width="560" height="22"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="16"/>
                                 <color key="textColor" red="0.58431372549019611" green="0.6470588235294118" blue="0.65098039215686276" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rth-6W-b8e">
-                                <rect key="frame" x="20" y="263" width="280" height="40"/>
+                                <rect key="frame" x="20" y="219" width="280" height="40"/>
                                 <color key="backgroundColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Ov1-3i-LP4"/>
@@ -168,7 +168,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bWb-kp-eh8">
-                                <rect key="frame" x="300" y="263" width="280" height="40"/>
+                                <rect key="frame" x="300" y="219" width="280" height="40"/>
                                 <color key="backgroundColor" red="0.18039215689999999" green="0.80000000000000004" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="İleri">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -179,7 +179,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tOh-Lt-3Lh">
-                                <rect key="frame" x="274" y="104" width="53" height="53"/>
+                                <rect key="frame" x="274" y="84" width="53" height="53"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="53" id="Lfw-Dc-Es2"/>
                                     <constraint firstAttribute="height" constant="53" id="uYo-wM-fJi"/>
@@ -191,9 +191,9 @@
                                     <action selector="voiceTapped:" destination="W4W-Z2-UjN" eventType="touchUpInside" id="ra8-rj-h82"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XE-No-VYY">
-                                <rect key="frame" x="421" y="504" width="159" height="34"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="16"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7XE-No-VYY">
+                                <rect key="frame" x="300" y="506" width="280" height="32"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
                                 <state key="normal" title="Zaten satın aldınız mı?">
                                     <color key="titleColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -202,14 +202,26 @@
                                     <action selector="restoreButtonTapped:" destination="W4W-Z2-UjN" eventType="touchUpInside" id="phk-Mw-n5y"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="tailTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csI-dM-A54">
+                                <rect key="frame" x="20" y="506" width="280" height="32"/>
+                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="14"/>
+                                <state key="normal" title="İstek &amp; Öneri">
+                                    <color key="titleColor" red="0.17254901959999999" green="0.24313725489999999" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="feedbackTapped:" destination="W4W-Z2-UjN" eventType="touchUpInside" id="Xsf-WI-T7N"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92549019610000005" green="0.94117647059999998" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="OgQ-ZO-YQw" firstAttribute="top" secondItem="tOh-Lt-3Lh" secondAttribute="bottom" constant="20" id="0Ip-h0-nyd"/>
+                            <constraint firstItem="OgQ-ZO-YQw" firstAttribute="top" secondItem="tOh-Lt-3Lh" secondAttribute="bottom" constant="10" id="0Ip-h0-nyd"/>
                             <constraint firstItem="4Iw-T7-3e9" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="1Fp-Bw-QwR"/>
                             <constraint firstAttribute="trailing" secondItem="OgQ-ZO-YQw" secondAttribute="trailing" constant="20" id="2jJ-5C-x0i"/>
                             <constraint firstItem="baC-hq-X1x" firstAttribute="top" relation="greaterThanOrEqual" secondItem="rth-6W-b8e" secondAttribute="bottom" constant="5" id="755-nL-t0m"/>
-                            <constraint firstItem="tOh-Lt-3Lh" firstAttribute="top" secondItem="XF6-AX-ZYQ" secondAttribute="bottom" constant="40" id="9Ql-7T-nB0"/>
+                            <constraint firstItem="3Jr-le-tDQ" firstAttribute="leading" secondItem="csI-dM-A54" secondAttribute="leading" id="7fr-Mn-GSi"/>
+                            <constraint firstItem="tOh-Lt-3Lh" firstAttribute="top" secondItem="XF6-AX-ZYQ" secondAttribute="bottom" constant="20" id="9Ql-7T-nB0"/>
                             <constraint firstAttribute="trailing" secondItem="4Iw-T7-3e9" secondAttribute="trailing" constant="20" id="CKN-tO-vJu"/>
                             <constraint firstItem="bWb-kp-eh8" firstAttribute="top" secondItem="rth-6W-b8e" secondAttribute="top" id="Eos-zN-uRV"/>
                             <constraint firstItem="rth-6W-b8e" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="Fn9-dA-gAB"/>
@@ -220,17 +232,21 @@
                             <constraint firstItem="bWb-kp-eh8" firstAttribute="leading" secondItem="rth-6W-b8e" secondAttribute="trailing" id="Jh8-gf-Ulk"/>
                             <constraint firstItem="bWb-kp-eh8" firstAttribute="width" secondItem="rth-6W-b8e" secondAttribute="width" id="MAQ-hw-nQV"/>
                             <constraint firstAttribute="trailing" secondItem="3Jr-le-tDQ" secondAttribute="trailing" constant="20" id="Uit-sL-oyd"/>
+                            <constraint firstItem="csI-dM-A54" firstAttribute="height" secondItem="7XE-No-VYY" secondAttribute="height" id="ZJs-kc-CAT"/>
                             <constraint firstItem="tOh-Lt-3Lh" firstAttribute="centerX" secondItem="OgQ-ZO-YQw" secondAttribute="centerX" id="Zcn-Ir-bOX"/>
+                            <constraint firstItem="csI-dM-A54" firstAttribute="width" secondItem="7XE-No-VYY" secondAttribute="width" id="a5Y-V8-rE5"/>
                             <constraint firstAttribute="trailing" secondItem="bWb-kp-eh8" secondAttribute="trailing" constant="20" id="aJd-5s-QSu"/>
                             <constraint firstItem="3Jr-le-tDQ" firstAttribute="top" secondItem="baC-hq-X1x" secondAttribute="bottom" constant="10" id="ake-Yf-zk3"/>
                             <constraint firstAttribute="trailing" secondItem="baC-hq-X1x" secondAttribute="trailing" constant="20" id="aum-7q-YGr"/>
+                            <constraint firstItem="7XE-No-VYY" firstAttribute="leading" secondItem="csI-dM-A54" secondAttribute="trailing" id="avc-Xb-lek"/>
                             <constraint firstItem="bWb-kp-eh8" firstAttribute="leading" secondItem="rth-6W-b8e" secondAttribute="trailing" id="bsF-W9-CGS"/>
                             <constraint firstItem="baC-hq-X1x" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="dV2-Ty-HwR"/>
                             <constraint firstItem="bWb-kp-eh8" firstAttribute="height" secondItem="rth-6W-b8e" secondAttribute="height" id="fmC-ad-mmf"/>
                             <constraint firstItem="OgQ-ZO-YQw" firstAttribute="leading" secondItem="455-hv-jG2" secondAttribute="leading" constant="20" id="gtH-9n-mNb"/>
-                            <constraint firstItem="4Iw-T7-3e9" firstAttribute="top" secondItem="OgQ-ZO-YQw" secondAttribute="bottom" constant="15" id="inb-iP-y1S"/>
+                            <constraint firstItem="4Iw-T7-3e9" firstAttribute="top" secondItem="OgQ-ZO-YQw" secondAttribute="bottom" constant="5" id="inb-iP-y1S"/>
                             <constraint firstItem="WVw-FR-7DG" firstAttribute="top" secondItem="7XE-No-VYY" secondAttribute="bottom" constant="8" id="jwA-qZ-8JR"/>
                             <constraint firstAttribute="trailing" secondItem="WVw-FR-7DG" secondAttribute="trailing" constant="20" id="mE5-fV-u2P"/>
+                            <constraint firstItem="csI-dM-A54" firstAttribute="centerY" secondItem="7XE-No-VYY" secondAttribute="centerY" id="u4o-kd-sZs"/>
                             <constraint firstItem="Jdq-C6-ruB" firstAttribute="top" secondItem="WVw-FR-7DG" secondAttribute="bottom" constant="20" id="xEL-dV-wjw"/>
                             <constraint firstItem="7XE-No-VYY" firstAttribute="top" secondItem="3Jr-le-tDQ" secondAttribute="bottom" constant="8" id="yC8-qP-50T"/>
                         </constraints>
