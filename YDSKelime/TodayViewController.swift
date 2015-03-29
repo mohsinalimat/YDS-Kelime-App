@@ -45,7 +45,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 updateUI()
             }
             else {
-                wordList = shuffle(arr.subarrayWithRange(NSMakeRange(0, 400)))
+                wordList = shuffle(arr.subarrayWithRange(NSMakeRange(0, 500)))
                 updateUI()
             }
         }

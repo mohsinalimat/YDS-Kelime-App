@@ -92,15 +92,6 @@ class IAPHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserv
         }
     }
     
-    func localizedPriceForProduct(product:SKProduct) -> String {
-        let priceFormatter = NSNumberFormatter()
-        priceFormatter.formatterBehavior = NSNumberFormatterBehavior.Behavior10_4
-        priceFormatter.numberStyle = NSNumberFormatterStyle.CurrencyStyle
-        
-        priceFormatter.locale = product.priceLocale
-        return priceFormatter.stringFromNumber(product.price)!
-    }
-    
     func completeTransaction(transaction:SKPaymentTransaction) {
         
         NSLog("completeTransaction...")

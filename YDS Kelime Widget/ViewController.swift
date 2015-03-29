@@ -12,7 +12,7 @@ import StoreKit
 class ViewController: UIViewController {
 
     var wordList: NSArray!
-    var products: NSArray!
+    var products: [AnyObject]?
     
     @IBOutlet var wordLabel: UILabel!
     @IBOutlet var meaningLabel: UILabel!
@@ -54,11 +54,11 @@ class ViewController: UIViewController {
             }
             else {
                 
-                if arr.count < 400 {
+                if arr.count < 500 {
                     wordList = shuffle(arr.subarrayWithRange(NSMakeRange(0, arr.count)))
                 }
                 else {
-                    wordList = shuffle(arr.subarrayWithRange(NSMakeRange(0, 400)))
+                    wordList = shuffle(arr.subarrayWithRange(NSMakeRange(0, 500)))
                 }
                 
                 updateUI()
@@ -107,18 +107,15 @@ class ViewController: UIViewController {
     
     @IBAction func buyButtonTapped(sender: AnyObject) {
         
-        if((products) != nil) {
+        
+        if let productList = products {
             
-            if(products.count > 0) {
-                let product: SKProduct = products[0] as SKProduct
-                
-                KelimeIAPHelper.shared.buyProduct(product)
-
+            if productList.count > 0 {
+                if let product = productList[0] as? SKProduct {
+                    KelimeIAPHelper.shared.buyProduct(product)
+                }
             }
-        
         }
-
-        
     }
     
     @IBAction func restoreButtonTapped(sender: AnyObject) {
@@ -126,37 +123,39 @@ class ViewController: UIViewController {
     }
     
     func productPurchased(notification: NSNotification) {
-        var productIdentifier: NSString = notification.object as NSString
+        var productIdentifier = notification.object as String
         
-        self.products.enumerateObjectsUsingBlock { (product, idx, stop) -> Void in
+        if let productList = products {
             
-            if(productIdentifier.isEqualToString(product.productIdentifier)) {
+            if productList.count > 0 {
                 
-                NSLog("hop aldık")
-                var sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
-                
-                sharedDefaults.setBool(true, forKey: "isPurchased")
-                sharedDefaults.synchronize()
-                self.reload()
-                
-                self.count = 0
-                
-                if let arr = sharedDefaults.objectForKey("wordList") as? NSArray {
-                    
-                    var isPurchased:Bool = sharedDefaults.boolForKey("isPurchased")
-                    
-                    if(isPurchased)
-                    {
-                        self.purchaseButton.hidden = true
-                        self.descLabel.hidden = true
-                        self.wordList = self.shuffle(arr)
-                        self.updateUI()
+                for (index, value) in enumerate(productList) {
+
+                    if productIdentifier == value.productIdentifier {
+                        println("hop aldık")
+                        var sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
+                        
+                        sharedDefaults.setBool(true, forKey: "isPurchased")
+                        sharedDefaults.synchronize()
+                        self.reload()
+                        
+                        self.count = 0
+                        
+                        if let arr = sharedDefaults.objectForKey("wordList") as? NSArray {
+                            
+                            var isPurchased:Bool = sharedDefaults.boolForKey("isPurchased")
+                            
+                            if(isPurchased)
+                            {
+                                self.purchaseButton.hidden = true
+                                self.descLabel.hidden = true
+                                self.wordList = self.shuffle(arr)
+                                self.updateUI()
+                            }
+                        }
                     }
                 }
-                
             }
-            
-            
         }
     }
     
