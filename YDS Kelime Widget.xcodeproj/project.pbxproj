@@ -18,6 +18,13 @@
 		A64585611A099A6800943A3A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64585601A099A6800943A3A /* AVFoundation.framework */; };
 		A6487D591A82BB63009BE91E /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6487D581A82BB63009BE91E /* IAPHelper.swift */; };
 		A6487D5C1A82BBA7009BE91E /* KelimeIAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6487D5B1A82BBA7009BE91E /* KelimeIAPHelper.swift */; };
+		A69125A01B48543000C63D34 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691259F1B48543000C63D34 /* InterfaceController.swift */; };
+		A69125A21B48543000C63D34 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69125A11B48543000C63D34 /* NotificationController.swift */; };
+		A69125A41B48543000C63D34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A69125A31B48543000C63D34 /* Images.xcassets */; };
+		A69125A81B48543000C63D34 /* YDS Kelime WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = A69125A71B48543000C63D34 /* YDS Kelime WatchKit App.app */; };
+		A69125B01B48543000C63D34 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A69125AE1B48543000C63D34 /* Interface.storyboard */; };
+		A69125B21B48543000C63D34 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A69125B11B48543000C63D34 /* Images.xcassets */; };
+		A69125B51B48543000C63D34 /* YDS Kelime WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A691259A1B48543000C63D34 /* YDS Kelime WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		A6A34C9F1A0B89880060404B /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A34C9E1A0B89880060404B /* Crashlytics.framework */; };
 		A6EC280C1A0A328000AF9547 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A64585601A099A6800943A3A /* AVFoundation.framework */; };
 		A6F0EC611A08123600909E2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F0EC601A08123600909E2C /* AppDelegate.swift */; };
@@ -35,6 +42,20 @@
 			remoteGlobalIDString = A6159CDF1A098A3600CBCB3A;
 			remoteInfo = YDSKelime;
 		};
+		A69125A91B48543000C63D34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6F0EC531A08123600909E2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A69125A61B48543000C63D34;
+			remoteInfo = "YDS Kelime WatchKit App";
+		};
+		A69125B31B48543000C63D34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A6F0EC531A08123600909E2C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A69125991B48543000C63D34;
+			remoteInfo = "YDS Kelime WatchKit Extension";
+		};
 		A6F0EC711A08123600909E2C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = A6F0EC531A08123600909E2C /* Project object */;
@@ -51,6 +72,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				A69125B51B48543000C63D34 /* YDS Kelime WatchKit Extension.appex in Embed App Extensions */,
 				A6159CED1A098A3700CBCB3A /* YDSKelime.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -74,6 +96,16 @@
 		A64585631A099B3300943A3A /* YDS Kelime Widget-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YDS Kelime Widget-Bridging-Header.h"; sourceTree = "<group>"; };
 		A6487D581A82BB63009BE91E /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IAPHelper.swift; path = Class/IAPHelper.swift; sourceTree = "<group>"; };
 		A6487D5B1A82BBA7009BE91E /* KelimeIAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KelimeIAPHelper.swift; path = Class/KelimeIAPHelper.swift; sourceTree = "<group>"; };
+		A691259A1B48543000C63D34 /* YDS Kelime WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "YDS Kelime WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A691259D1B48543000C63D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A691259E1B48543000C63D34 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		A691259F1B48543000C63D34 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		A69125A11B48543000C63D34 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		A69125A31B48543000C63D34 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		A69125A71B48543000C63D34 /* YDS Kelime WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "YDS Kelime WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A69125AD1B48543000C63D34 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A69125AF1B48543000C63D34 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		A69125B11B48543000C63D34 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A6A34C9B1A0B87CF0060404B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		A6A34C9E1A0B89880060404B /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		A6EC280D1A0A32A900AF9547 /* YDSKelime-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YDSKelime-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -86,6 +118,7 @@
 		A6F0EC701A08123600909E2C /* YDS Kelime WidgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "YDS Kelime WidgetTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6F0EC751A08123600909E2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A6F0EC761A08123600909E2C /* YDS_Kelime_WidgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YDS_Kelime_WidgetTests.swift; sourceTree = "<group>"; };
+		A6FE52711B4893D20098713E /* YDS Kelime WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = "YDS Kelime WatchKit Extension.entitlements"; sourceTree = "<group>"; };
 		EB014A6496BAC05A99D8B627 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +129,13 @@
 			files = (
 				A6EC280C1A0A328000AF9547 /* AVFoundation.framework in Frameworks */,
 				A6159CE31A098A3700CBCB3A /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69125971B48543000C63D34 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -170,12 +210,53 @@
 			name = Class;
 			sourceTree = "<group>";
 		};
+		A691259B1B48543000C63D34 /* YDS Kelime WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A6FE52711B4893D20098713E /* YDS Kelime WatchKit Extension.entitlements */,
+				A691259F1B48543000C63D34 /* InterfaceController.swift */,
+				A69125A11B48543000C63D34 /* NotificationController.swift */,
+				A69125A31B48543000C63D34 /* Images.xcassets */,
+				A691259C1B48543000C63D34 /* Supporting Files */,
+			);
+			path = "YDS Kelime WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		A691259C1B48543000C63D34 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A691259D1B48543000C63D34 /* Info.plist */,
+				A691259E1B48543000C63D34 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A69125AB1B48543000C63D34 /* YDS Kelime WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				A69125AE1B48543000C63D34 /* Interface.storyboard */,
+				A69125B11B48543000C63D34 /* Images.xcassets */,
+				A69125AC1B48543000C63D34 /* Supporting Files */,
+			);
+			path = "YDS Kelime WatchKit App";
+			sourceTree = "<group>";
+		};
+		A69125AC1B48543000C63D34 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A69125AD1B48543000C63D34 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		A6F0EC521A08123600909E2C = {
 			isa = PBXGroup;
 			children = (
 				A6F0EC5D1A08123600909E2C /* YDS Kelime Widget */,
 				A6F0EC731A08123600909E2C /* YDS Kelime WidgetTests */,
 				A6159CE41A098A3700CBCB3A /* YDSKelime */,
+				A691259B1B48543000C63D34 /* YDS Kelime WatchKit Extension */,
+				A69125AB1B48543000C63D34 /* YDS Kelime WatchKit App */,
 				A6159CE11A098A3700CBCB3A /* Frameworks */,
 				A6F0EC5C1A08123600909E2C /* Products */,
 				34A1A259451A7B1B8FC4D57D /* Pods */,
@@ -188,6 +269,8 @@
 				A6F0EC5B1A08123600909E2C /* YDS Kelime Widget.app */,
 				A6F0EC701A08123600909E2C /* YDS Kelime WidgetTests.xctest */,
 				A6159CE01A098A3700CBCB3A /* YDSKelime.appex */,
+				A691259A1B48543000C63D34 /* YDS Kelime WatchKit Extension.appex */,
+				A69125A71B48543000C63D34 /* YDS Kelime WatchKit App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -254,6 +337,39 @@
 			productReference = A6159CE01A098A3700CBCB3A /* YDSKelime.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		A69125991B48543000C63D34 /* YDS Kelime WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A69125BB1B48543000C63D34 /* Build configuration list for PBXNativeTarget "YDS Kelime WatchKit Extension" */;
+			buildPhases = (
+				A69125961B48543000C63D34 /* Sources */,
+				A69125971B48543000C63D34 /* Frameworks */,
+				A69125981B48543000C63D34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A69125AA1B48543000C63D34 /* PBXTargetDependency */,
+			);
+			name = "YDS Kelime WatchKit Extension";
+			productName = "YDS Kelime WatchKit Extension";
+			productReference = A691259A1B48543000C63D34 /* YDS Kelime WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		A69125A61B48543000C63D34 /* YDS Kelime WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A69125BA1B48543000C63D34 /* Build configuration list for PBXNativeTarget "YDS Kelime WatchKit App" */;
+			buildPhases = (
+				A69125A51B48543000C63D34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "YDS Kelime WatchKit App";
+			productName = "YDS Kelime WatchKit App";
+			productReference = A69125A71B48543000C63D34 /* YDS Kelime WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
 		A6F0EC5A1A08123600909E2C /* YDS Kelime Widget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A6F0EC7A1A08123600909E2C /* Build configuration list for PBXNativeTarget "YDS Kelime Widget" */;
@@ -270,6 +386,7 @@
 			);
 			dependencies = (
 				A6159CEC1A098A3700CBCB3A /* PBXTargetDependency */,
+				A69125B41B48543000C63D34 /* PBXTargetDependency */,
 			);
 			name = "YDS Kelime Widget";
 			productName = "YDS Kelime Widget";
@@ -300,6 +417,7 @@
 		A6F0EC531A08123600909E2C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Hayal Co";
 				TargetAttributes = {
@@ -311,6 +429,19 @@
 								enabled = 1;
 							};
 						};
+					};
+					A69125991B48543000C63D34 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 4GA7VHNLUN;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					A69125A61B48543000C63D34 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 4GA7VHNLUN;
 					};
 					A6F0EC5A1A08123600909E2C = {
 						CreatedOnToolsVersion = 6.1;
@@ -347,6 +478,8 @@
 				A6F0EC5A1A08123600909E2C /* YDS Kelime Widget */,
 				A6F0EC6F1A08123600909E2C /* YDS Kelime WidgetTests */,
 				A6159CDF1A098A3600CBCB3A /* YDSKelime */,
+				A69125991B48543000C63D34 /* YDS Kelime WatchKit Extension */,
+				A69125A61B48543000C63D34 /* YDS Kelime WatchKit App */,
 			);
 		};
 /* End PBXProject section */
@@ -358,6 +491,24 @@
 			files = (
 				A6159CF21A098F3F00CBCB3A /* Images.xcassets in Resources */,
 				A6159CEA1A098A3700CBCB3A /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69125981B48543000C63D34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A69125A41B48543000C63D34 /* Images.xcassets in Resources */,
+				A69125A81B48543000C63D34 /* YDS Kelime WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A69125A51B48543000C63D34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A69125B01B48543000C63D34 /* Interface.storyboard in Resources */,
+				A69125B21B48543000C63D34 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +586,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A69125961B48543000C63D34 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A69125A21B48543000C63D34 /* NotificationController.swift in Sources */,
+				A69125A01B48543000C63D34 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6F0EC571A08123600909E2C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -462,6 +622,16 @@
 			target = A6159CDF1A098A3600CBCB3A /* YDSKelime */;
 			targetProxy = A6159CEB1A098A3700CBCB3A /* PBXContainerItemProxy */;
 		};
+		A69125AA1B48543000C63D34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A69125A61B48543000C63D34 /* YDS Kelime WatchKit App */;
+			targetProxy = A69125A91B48543000C63D34 /* PBXContainerItemProxy */;
+		};
+		A69125B41B48543000C63D34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A69125991B48543000C63D34 /* YDS Kelime WatchKit Extension */;
+			targetProxy = A69125B31B48543000C63D34 /* PBXContainerItemProxy */;
+		};
 		A6F0EC721A08123600909E2C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = A6F0EC5A1A08123600909E2C /* YDS Kelime Widget */;
@@ -470,6 +640,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		A69125AE1B48543000C63D34 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A69125AF1B48543000C63D34 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		A6F0EC641A08123600909E2C /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -487,7 +665,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = YDSKelime/YDSKelime.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ahmet Yalcinkaya (NUAC836QMM)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -496,7 +674,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "55f72eef-3b7c-4390-aa10-d15d9daa505b";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "YDSKelime/YDSKelime-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -510,15 +688,97 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = YDSKelime/YDSKelime.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ahmet Yalcinkaya";
 				INFOPLIST_FILE = YDSKelime/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "0ad457c5-e962-48e2-a79c-f23b85d5429a";
+				PROVISIONING_PROFILE = "aff74e7c-d11a-4033-8d2b-2731e34f1ff3";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "YDSKelime/YDSKelime-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A69125B61B48543000C63D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "YDS Kelime WatchKit Extension/YDS Kelime WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ahmet Yalcinkaya (NUAC836QMM)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "YDS Kelime WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "080886c4-1a9b-4be0-bce0-d1d4c5fc456b";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		A69125B71B48543000C63D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = "YDS Kelime WatchKit Extension/YDS Kelime WatchKit Extension.entitlements";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ahmet Yalcinkaya";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "YDS Kelime WatchKit Extension/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				PROVISIONING_PROFILE = "7efe9607-f2cb-4787-8c8e-74f171d8afd8";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		A69125B81B48543000C63D34 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ahmet Yalcinkaya (NUAC836QMM)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = YDS_Kelime_WatchKit_Extension;
+				INFOPLIST_FILE = "YDS Kelime WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "81e07023-1bca-4de4-9670-f72ca7a45af8";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		A69125B91B48543000C63D34 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ahmet Yalcinkaya";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_NO_COMMON_BLOCKS = YES;
+				IBSC_MODULE = YDS_Kelime_WatchKit_Extension;
+				INFOPLIST_FILE = "YDS Kelime WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "1a40d479-8dbc-4193-8b75-0cda4eedb60f";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
 			};
 			name = Release;
 		};
@@ -539,7 +799,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ahmet Yalcinkaya (NUAC836QMM)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -559,7 +820,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "df7f1744-edb8-4bde-aa7b-bc61eadf91d6";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -582,7 +843,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ahmet Yalcinkaya";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -595,7 +857,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "578a4d7c-c649-48dc-bde7-ce293c9a066a";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -610,7 +872,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "YDS Kelime Widget/YDS Kelime Widget.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Ahmet Yalcinkaya (NUAC836QMM)";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -625,7 +887,7 @@
 				INFOPLIST_FILE = "YDS Kelime Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "df7f1744-edb8-4bde-aa7b-bc61eadf91d6";
 				SWIFT_OBJC_BRIDGING_HEADER = "YDS Kelime Widget/YDS Kelime Widget-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -640,8 +902,8 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "YDS Kelime Widget/YDS Kelime Widget.entitlements";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Ahmet Yalcinkaya (4GA7VHNLUN)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Ahmet Yalcinkaya";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -656,7 +918,7 @@
 				INFOPLIST_FILE = "YDS Kelime Widget/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "51d38d72-a2a8-4345-a984-e2322adad5bd";
+				PROVISIONING_PROFILE = "578a4d7c-c649-48dc-bde7-ce293c9a066a";
 				SWIFT_OBJC_BRIDGING_HEADER = "YDS Kelime Widget/YDS Kelime Widget-Bridging-Header.h";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -710,6 +972,24 @@
 			buildConfigurations = (
 				A6159CEF1A098A3700CBCB3A /* Debug */,
 				A6159CF01A098A3700CBCB3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A69125BA1B48543000C63D34 /* Build configuration list for PBXNativeTarget "YDS Kelime WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A69125B81B48543000C63D34 /* Debug */,
+				A69125B91B48543000C63D34 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A69125BB1B48543000C63D34 /* Build configuration list for PBXNativeTarget "YDS Kelime WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A69125B61B48543000C63D34 /* Debug */,
+				A69125B71B48543000C63D34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -19,7 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let path = NSBundle.mainBundle().pathForResource("words.plist", ofType: nil)
-        var wordList = NSArray(contentsOfFile: path!)
+        var tmpWordList = NSArray(contentsOfFile: path!)
+        
+        var wordList:[[String:AnyObject]] = []
+
+        if let list = tmpWordList {
+            for item in list {
+                if let word = item as? [String : AnyObject] {
+                    wordList.append(word)
+                }
+            }
+        }
         
         
         var sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!

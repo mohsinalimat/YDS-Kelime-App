@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Notification - YDS Kelime WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
+		<key>YDS Kelime WatchKit App.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>7</integer>
+		</dict>
 		<key>YDS Kelime Widget.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -18,6 +28,11 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>A6159CDF1A098A3600CBCB3A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A69125A61B48543000C63D34</key>
 		<dict>
 			<key>primary</key>
 			<true/>

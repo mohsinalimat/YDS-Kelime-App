@@ -5,11 +5,11 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>YDSKelime</string>
+	<string>YDS Kelime WatchKit Extension</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
-	<string>co.hayal.yds.YDS-Kelime-Widget.$(PRODUCT_NAME:rfc1034identifier)</string>
+	<string>co.hayal.yds.watchkitextension</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -21,13 +21,18 @@
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>1.0</string>
 	<key>NSExtension</key>
 	<dict>
-		<key>NSExtensionMainStoryboard</key>
-		<string>MainInterface</string>
+		<key>NSExtensionAttributes</key>
+		<dict>
+			<key>WKAppBundleIdentifier</key>
+			<string>co.hayal.yds.watchkitapp</string>
+		</dict>
 		<key>NSExtensionPointIdentifier</key>
-		<string>com.apple.widget-extension</string>
+		<string>com.apple.watchkit</string>
 	</dict>
+	<key>RemoteInterfacePrincipalClass</key>
+	<string>$(PRODUCT_MODULE_NAME).InterfaceController</string>
 </dict>
 </plist>

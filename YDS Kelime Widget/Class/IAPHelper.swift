@@ -28,8 +28,8 @@ class IAPHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserv
     
     func requestProductsWithCompletionHandler(handler:((Bool,NSArray) -> Void)) {
         self.completionHandler = handler
-        println("Requesting products \(productIdentifiers)")
-        productsRequest = SKProductsRequest(productIdentifiers: productIdentifiers)
+        print("Requesting products \(productIdentifiers)")
+        productsRequest = SKProductsRequest(productIdentifiers: productIdentifiers! as Set<NSObject>)
         productsRequest?.delegate = self
         productsRequest?.start()
     }
@@ -37,7 +37,7 @@ class IAPHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserv
     // Mark: SKProductsRequestDelegate
     
     func productsRequest(request: SKProductsRequest!, didReceiveResponse response: SKProductsResponse!)  {
-        println("Loaded list of products")
+        print("Loaded list of products")
         self.productsRequest = nil
         
         let skproducts = response.products
@@ -72,7 +72,7 @@ class IAPHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserv
     }
     
     func paymentQueue(queue: SKPaymentQueue!, updatedTransactions transactions: [AnyObject]!) {
-        for transaction in transactions as [SKPaymentTransaction] {
+        for transaction in transactions as! [SKPaymentTransaction] {
             switch transaction.transactionState {
             case .Purchased:
                 completeTransaction(transaction)
@@ -84,7 +84,7 @@ class IAPHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserv
                 restoreTransaction(transaction)
                 break
             case .Purchasing:
-                println("Purchasing!")
+                print("Purchasing!")
             default:
                 break
             }
@@ -106,7 +106,7 @@ class IAPHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserv
     }
     
     func restoreTransaction(transaction:SKPaymentTransaction) {
-        println("Restore transaction")
+        print("Restore transaction")
         
         let alert = UIAlertView(title: "İşleminiz başarıyla tamamlandı!", message: "İyi eğlenceler!", delegate:nil, cancelButtonTitle:"OK")
         alert.show()
@@ -117,13 +117,13 @@ class IAPHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserv
     }
     
     func failedTransaction(transaction:SKPaymentTransaction) {
-        println("Failed transaction")
+        print("Failed transaction")
         if transaction.error.code != SKErrorPaymentCancelled {
             
             let alert = UIAlertView(title: "Hata!", message: "Bir Hata Oluştu.", delegate:nil, cancelButtonTitle:"OK")
             alert.show()
             
-            println("Transaction error: \(transaction.error.localizedDescription)")
+            print("Transaction error: \(transaction.error.localizedDescription)")
         }
         SKPaymentQueue.defaultQueue().finishTransaction(transaction)
     }

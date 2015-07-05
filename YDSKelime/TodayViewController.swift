@@ -11,7 +11,7 @@ import NotificationCenter
 
 class TodayViewController: UIViewController, NCWidgetProviding {
     
-    var wordList: NSArray!
+    var wordList: [[String:AnyObject]]!
     
     @IBOutlet var wordLabel: UILabel!
     @IBOutlet var meaningLabel: UILabel!
@@ -25,19 +25,19 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         self.synth = AVSpeechSynthesizer()
 
         // iOS 8 bug fix
-        var dummyUtterance:AVSpeechUtterance = AVSpeechUtterance(string:" ")
+        let dummyUtterance:AVSpeechUtterance = AVSpeechUtterance(string:" ")
         dummyUtterance.voice = AVSpeechSynthesisVoice()
         dummyUtterance.rate = AVSpeechUtteranceMaximumSpeechRate
         self.synth.speakUtterance(dummyUtterance)
         
         
-        var sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
+        let sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
         
         count = 0
         
-        if let arr = sharedDefaults.objectForKey("wordList") as? NSArray {
+        if let arr = sharedDefaults.objectForKey("wordList") as? [[String:AnyObject]] {
             
-            var isPurchased:Bool = sharedDefaults.boolForKey("isPurchased")
+            let isPurchased:Bool = sharedDefaults.boolForKey("isPurchased")
             
             if(isPurchased)
             {
@@ -45,7 +45,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 updateUI()
             }
             else {
-                wordList = shuffle(arr.subarrayWithRange(NSMakeRange(0, 500)))
+                wordList = shuffle(Array(arr[0..<500]))
+
+//                wordList = shuffle(arr.subarrayWithRange(NSMakeRange(0, 500)))
                 updateUI()
             }
         }
@@ -59,7 +61,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
     
     @IBAction func voiceTapped(sender: AnyObject) {
-        var utterance:AVSpeechUtterance = AVSpeechUtterance(string:wordLabel.text)
+        let utterance:AVSpeechUtterance = AVSpeechUtterance(string:wordLabel.text!)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         utterance.rate = 0.05
         self.synth.speakUtterance(utterance)

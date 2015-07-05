@@ -9,9 +9,17 @@
 import UIKit
 import StoreKit
 
+func shuffle<T>(var list: Array<T>) -> Array<T> {
+    for i in 0..<list.count {
+        let j = Int(arc4random_uniform(UInt32(list.count - i))) + i
+        list.insert(list.removeAtIndex(j), atIndex: i)
+    }
+    return list
+}
+
 class ViewController: UIViewController {
 
-    var wordList: NSArray!
+    var wordList: [[String:AnyObject]]!
     var products: [AnyObject]?
     
     @IBOutlet var wordLabel: UILabel!
@@ -29,19 +37,19 @@ class ViewController: UIViewController {
         self.synth = AVSpeechSynthesizer()
 
         // iOS 8 bug fix
-        var dummyUtterance:AVSpeechUtterance = AVSpeechUtterance(string:" ")
+        let dummyUtterance:AVSpeechUtterance = AVSpeechUtterance(string:" ")
         dummyUtterance.voice = AVSpeechSynthesisVoice()
         dummyUtterance.rate = AVSpeechUtteranceMaximumSpeechRate
         self.synth.speakUtterance(dummyUtterance)
         
         
-        var sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
+        let sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
         
         count = 0
         
         self.purchaseButton.setTitle("Tüm Kelimeleri Satın Al", forState: UIControlState.Normal)
         
-        if let arr = sharedDefaults.objectForKey("wordList") as? NSArray {
+        if let arr = sharedDefaults.objectForKey("wordList") as? [[String:AnyObject]] {
             
             let isPurchased:Bool = sharedDefaults.boolForKey("isPurchased")
             
@@ -55,10 +63,12 @@ class ViewController: UIViewController {
             else {
                 
                 if arr.count < 500 {
-                    wordList = shuffle(arr.subarrayWithRange(NSMakeRange(0, arr.count)))
+                    wordList = shuffle(Array(arr[0..<arr.count]))
+//                    wordList = shuffle(arr.subarrayWithRange(NSMakeRange(0, arr.count)))
                 }
                 else {
-                    wordList = shuffle(arr.subarrayWithRange(NSMakeRange(0, 500)))
+                    wordList = shuffle(Array(arr[0..<500]))
+//                    wordList = shuffle(arr.subarrayWithRange(NSMakeRange(0, 500)))
                 }
                 
                 updateUI()
@@ -70,7 +80,7 @@ class ViewController: UIViewController {
     
     @IBAction func feedbackTapped(sender: AnyObject) {
         
-        var feedbackViewController:CTFeedbackViewController = CTFeedbackViewController(topics: CTFeedbackViewController.defaultTopics(), localizedTopics: CTFeedbackViewController.defaultTopics())
+        let feedbackViewController:CTFeedbackViewController = CTFeedbackViewController(topics: CTFeedbackViewController.defaultTopics(), localizedTopics: CTFeedbackViewController.defaultTopics())
         feedbackViewController.toRecipients = ["ahmet@guncelcaps.com"]
         feedbackViewController.useHTML = false
         self.navigationController?.pushViewController(feedbackViewController, animated: true)
@@ -80,7 +90,7 @@ class ViewController: UIViewController {
         super.viewWillAppear(animated)
         
         
-        var sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
+        let sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
         
         let isPurchased = sharedDefaults.boolForKey("isPurchased")
         
@@ -123,7 +133,7 @@ class ViewController: UIViewController {
     }
     
     func productPurchased(notification: NSNotification) {
-        var productIdentifier = notification.object as String
+        let productIdentifier = notification.object as! String
         
         if let productList = products {
             
@@ -132,8 +142,8 @@ class ViewController: UIViewController {
                 for (index, value) in enumerate(productList) {
 
                     if productIdentifier == value.productIdentifier {
-                        println("hop aldık")
-                        var sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
+                        print("hop aldık")
+                        let sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
                         
                         sharedDefaults.setBool(true, forKey: "isPurchased")
                         sharedDefaults.synchronize()
@@ -141,15 +151,15 @@ class ViewController: UIViewController {
                         
                         self.count = 0
                         
-                        if let arr = sharedDefaults.objectForKey("wordList") as? NSArray {
+                        if let arr = sharedDefaults.objectForKey("wordList") as? [[String:AnyObject]] {
                             
-                            var isPurchased:Bool = sharedDefaults.boolForKey("isPurchased")
+                            let isPurchased:Bool = sharedDefaults.boolForKey("isPurchased")
                             
                             if(isPurchased)
                             {
                                 self.purchaseButton.hidden = true
                                 self.descLabel.hidden = true
-                                self.wordList = self.shuffle(arr)
+                                self.wordList = shuffle(arr)
                                 self.updateUI()
                             }
                         }
@@ -163,7 +173,7 @@ class ViewController: UIViewController {
         self.products = nil
         KelimeIAPHelper.shared.requestProductsWithCompletionHandler { (success, products) -> Void in
             if(success) {
-                self.products = products
+                self.products = products as [AnyObject]
             }
         }
         
@@ -181,8 +191,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func voiceTapped(sender: AnyObject) {
-        var text =  wordLabel.text
-        var utterance:AVSpeechUtterance = AVSpeechUtterance(string:text)
+        let text =  wordLabel.text
+        let utterance:AVSpeechUtterance = AVSpeechUtterance(string:text)
         
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         utterance.rate = 0.05
@@ -204,12 +214,6 @@ class ViewController: UIViewController {
         
     }
     
-    func shuffle<T>(var list: Array<T>) -> Array<T> {
-        for i in 0..<list.count {
-            let j = Int(arc4random_uniform(UInt32(list.count - i))) + i
-            list.insert(list.removeAtIndex(j), atIndex: i)
-        }
-        return list
-    }
+
 }
 
