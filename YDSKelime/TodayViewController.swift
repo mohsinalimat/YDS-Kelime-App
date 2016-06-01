@@ -69,14 +69,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     
     @IBAction func nextTapped(sender: AnyObject) {
         if(count < wordList.count-1) {
-            count++
+            count += 1
             updateUI()
         }
     }
     
     @IBAction func prevTapped(sender: AnyObject) {
         if (count > 0){
-            count--
+            count -= 1
             updateUI()
         }
         
@@ -87,7 +87,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         // Dispose of any resources that can be recreated.
     }
     
-    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)!) {
+    func widgetPerformUpdateWithCompletionHandler(completionHandler: ((NCUpdateResult) -> Void)) {
         // Perform any setup necessary in order to update the view.
 
         // If an error is encountered, use NCUpdateResult.Failed
@@ -97,7 +97,8 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         completionHandler(NCUpdateResult.NewData)
     }
     
-    func shuffle<T>(var list: Array<T>) -> Array<T> {
+    func shuffle<T>(list: Array<T>) -> Array<T> {
+        var list = list
         for i in 0..<list.count {
             let j = Int(arc4random_uniform(UInt32(list.count - i))) + i
             list.insert(list.removeAtIndex(j), atIndex: i)

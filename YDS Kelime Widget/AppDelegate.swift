@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         
         let path = NSBundle.mainBundle().pathForResource("words.plist", ofType: nil)
-        var tmpWordList = NSArray(contentsOfFile: path!)
+        let tmpWordList = NSArray(contentsOfFile: path!)
         
         var wordList:[[String:AnyObject]] = []
 
@@ -32,7 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         
-        var sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
+        let sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
         sharedDefaults.setObject(wordList, forKey:"wordList")
         sharedDefaults.synchronize()
         
@@ -42,10 +42,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("2DwWlHvql0nHep1hjqzofhJhyJ77veN6Vz5uPxx3", clientKey: "54o1Gt3dbxQPj40pVppRiRUfjkq3436ZZqhLjrZz")
         PFAnalytics.trackAppOpenedWithLaunchOptionsInBackground(launchOptions, block: nil)
         
-        if application.respondsToSelector("isRegisteredForRemoteNotifications") {
-            // iOS 8 Notifications
-            application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: UIUserNotificationType.Sound | UIUserNotificationType.Alert | UIUserNotificationType.Badge, categories: nil))
-            application.registerForRemoteNotifications()
+        if #available(iOS 8.0, *) {
+            if application.respondsToSelector(#selector(UIApplication.isRegisteredForRemoteNotifications)) {
+                // iOS 8 Notifications
+                application.registerUserNotificationSettings(UIUserNotificationSettings(forTypes: [.Alert, .Badge, .Sound], categories: nil))
+                application.registerForRemoteNotifications()
+            }
+        } else {
+            // Fallback on earlier versions
         }
         
         return true

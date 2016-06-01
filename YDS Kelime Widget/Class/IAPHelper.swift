@@ -11,7 +11,7 @@ import StoreKit
 
 let IAPHelperProductPurchasedNotification:String = "IAPHelperProductPurchasedNotification"
 
-class IAPHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserver{
+class IAPHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserver {
     
     var productsRequest:SKProductsRequest?
     var completionHandler:((Bool,NSArray) -> Void)? // (BOOL success, NSArray *products)
@@ -29,26 +29,26 @@ class IAPHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserv
     func requestProductsWithCompletionHandler(handler:((Bool,NSArray) -> Void)) {
         self.completionHandler = handler
         print("Requesting products \(productIdentifiers)")
-        productsRequest = SKProductsRequest(productIdentifiers: productIdentifiers! as Set<NSObject>)
+        productsRequest = SKProductsRequest(productIdentifiers: productIdentifiers as! Set<String>)
         productsRequest?.delegate = self
         productsRequest?.start()
     }
     
     // Mark: SKProductsRequestDelegate
     
-    func productsRequest(request: SKProductsRequest!, didReceiveResponse response: SKProductsResponse!)  {
+    func productsRequest(request: SKProductsRequest, didReceiveResponse response: SKProductsResponse)  {
         print("Loaded list of products")
         self.productsRequest = nil
         
         let skproducts = response.products
         for product in skproducts {
-            productsDict[product.productIdentifier] = product as? SKProduct
+            productsDict[product.productIdentifier] = product
         }
         self.completionHandler?(true, skproducts)
         completionHandler = nil
     }
     
-    func request(request: SKRequest!, didFailWithError error: NSError!)  {
+    func request(request: SKRequest, didFailWithError error: NSError)  {
         NSLog("Failed to load list of products.");
         
         let alert = UIAlertView(title: "Failed to load list of products.", message: "", delegate:nil, cancelButtonTitle:"OK", otherButtonTitles:"")
@@ -59,11 +59,6 @@ class IAPHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserv
         self.completionHandler = nil
     }
     
-    /*  func productPurchased(productIdentifier:String) -> Bool {
-    return productsDict
-    }
-    */
-    
     func buyProduct(product:SKProduct) {
         NSLog("Buying %@ ... (buyProduct ind IAPHelper)", product.productIdentifier);
         
@@ -71,8 +66,8 @@ class IAPHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserv
         SKPaymentQueue.defaultQueue().addPayment(payment)
     }
     
-    func paymentQueue(queue: SKPaymentQueue!, updatedTransactions transactions: [AnyObject]!) {
-        for transaction in transactions as! [SKPaymentTransaction] {
+    func paymentQueue(queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+        for transaction in transactions {
             switch transaction.transactionState {
             case .Purchased:
                 completeTransaction(transaction)
@@ -88,7 +83,6 @@ class IAPHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserv
             default:
                 break
             }
-            
         }
     }
     
@@ -111,19 +105,19 @@ class IAPHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionObserv
         let alert = UIAlertView(title: "İşleminiz başarıyla tamamlandı!", message: "İyi eğlenceler!", delegate:nil, cancelButtonTitle:"OK")
         alert.show()
         
-        self.provideContentForProductIdentifier(transaction.originalTransaction.payment.productIdentifier)
+        self.provideContentForProductIdentifier(transaction.originalTransaction!.payment.productIdentifier)
         SKPaymentQueue.defaultQueue().finishTransaction(transaction)
         
     }
     
     func failedTransaction(transaction:SKPaymentTransaction) {
         print("Failed transaction")
-        if transaction.error.code != SKErrorPaymentCancelled {
+        if transaction.error!.code != SKErrorCode.PaymentCancelled.rawValue {
             
             let alert = UIAlertView(title: "Hata!", message: "Bir Hata Oluştu.", delegate:nil, cancelButtonTitle:"OK")
             alert.show()
             
-            print("Transaction error: \(transaction.error.localizedDescription)")
+            print("Transaction error: \(transaction.error?.localizedDescription)")
         }
         SKPaymentQueue.defaultQueue().finishTransaction(transaction)
     }

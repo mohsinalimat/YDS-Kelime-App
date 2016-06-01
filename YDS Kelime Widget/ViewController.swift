@@ -9,7 +9,8 @@
 import UIKit
 import StoreKit
 
-func shuffle<T>(var list: Array<T>) -> Array<T> {
+func shuffle<T>(list: Array<T>) -> Array<T> {
+    var list = list
     for i in 0..<list.count {
         let j = Int(arc4random_uniform(UInt32(list.count - i))) + i
         list.insert(list.removeAtIndex(j), atIndex: i)
@@ -103,7 +104,7 @@ class ViewController: UIViewController {
         }
         else {
             self.reload()
-            NSNotificationCenter.defaultCenter().addObserver(self, selector:"productPurchased:", name:IAPHelperProductPurchasedNotification, object: nil)
+            NSNotificationCenter.defaultCenter().addObserver(self, selector:#selector(ViewController.productPurchased(_:)), name:IAPHelperProductPurchasedNotification, object: nil)
         }
         
 
@@ -139,10 +140,9 @@ class ViewController: UIViewController {
             
             if productList.count > 0 {
                 
-                for (index, value) in enumerate(productList) {
+                for product in productList {
 
-                    if productIdentifier == value.productIdentifier {
-                        print("hop aldık")
+                    if productIdentifier == product.productIdentifier {
                         let sharedDefaults:NSUserDefaults = NSUserDefaults(suiteName: "group.hayal.yds")!
                         
                         sharedDefaults.setBool(true, forKey: "isPurchased")
@@ -192,7 +192,7 @@ class ViewController: UIViewController {
     
     @IBAction func voiceTapped(sender: AnyObject) {
         let text =  wordLabel.text
-        let utterance:AVSpeechUtterance = AVSpeechUtterance(string:text)
+        let utterance:AVSpeechUtterance = AVSpeechUtterance(string:text!)
         
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         utterance.rate = 0.05
@@ -201,14 +201,14 @@ class ViewController: UIViewController {
     
     @IBAction func nextTapped(sender: AnyObject) {
         if(count < wordList.count-1) {
-            count++
+            count += 1
             updateUI()
         }
     }
     
     @IBAction func prevTapped(sender: AnyObject) {
         if (count > 0){
-            count--
+            count -= 1
             updateUI()
         }
         

@@ -63,19 +63,21 @@ class InterfaceController: WKInterfaceController {
     
     @IBAction func nextTapped() {
         if(count < wordList.count-1) {
-            count++
+            count += 1
             updateUI()
         }
     }
     
     @IBAction func prevTapped() {
         if (count > 0){
-            count--
+            count -= 1
             updateUI()
         }
         
     }
-    func shuffle<T>(var list: Array<T>) -> Array<T> {
+    
+    func shuffle<T>(list: Array<T>) -> Array<T> {
+        var list = list
         for i in 0..<list.count {
             let j = Int(arc4random_uniform(UInt32(list.count - i))) + i
             list.insert(list.removeAtIndex(j), atIndex: i)
